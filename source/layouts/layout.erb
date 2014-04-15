@@ -25,10 +25,10 @@
         <section class="top-bar-section">
             <!-- Right Nav Section -->
             <ul class="right">
-                <li><%= link_to 'Cosa dice la legge', 'cosa-dice-la-legge' %></li>
-                <li><%= link_to 'Come scegliere', 'come-scegliere-un-defibrillatore' %></li>
-                <li><%= link_to 'Corsi di Abilitazione', 'abilitarsi-alluso' %></li>
-                <li><%= link_to 'Defibrillatore Philips', 'defibrillatori-philips' %></li>
+                <li><%= link_to 'Cosa dice la legge', '/pagine/cosa-dice-la-legge' %></li>
+                <li><%= link_to 'Come scegliere', '/pagine/come-scegliere-un-defibrillatore' %></li>
+                <li><%= link_to 'Corsi di Abilitazione', '/pagine/abilitarsi-alluso' %></li>
+                <li><%= link_to 'Defibrillatori Philips', '/pagine/defibrillatori-philips' %></li>
                 <li><%= link_to 'Prezzi', 'prezzi' %></li>
                 <li><%= link_to 'Blog', 'Blog' %></li>
             </ul>
@@ -36,40 +36,81 @@
     </nav>
 </div>
 
+<div class="row">
+    <div class="large-12 columns">
+        <div class="row">
+            <div class="large-12 hide-for-small">
+                <div id="featured">
+                    <%= tag :img, :src => current_page.data.immagineTestata, :title => current_page.data.title %>
+                </div>
+            </div>
+        </div>
+
+        <div class="row over">
+            <div class="large-12 hide-for-small">
+                <%= current_page.data.testoTestata %>
+                <div class="numero_verde">800 782 217</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="large-12 columns show-for-small">
+                <img src="http://placehold.it/1200x700&text=Mobile Header">
+            </div>
+        </div>
+    </div>
+</div>
+
+<br/>
+
+
 
 <body class="<%= page_classes %>">
-    <%= yield %>
 
-    <%= javascript_include_tag  "all" %>
+    <div class="row">
+        <div class="large-8 columns">
+            <%= yield %>
+        </div>
+        <%= partial "partials/wufooForm" %>
+    </div>
 
-</body>
-
-<!-- Footer -->
-
-      <footer class="row">
+    <footer class="row">
         <div class="large-12 columns"><hr>
             <div class="row">
-                <div class="large-3 columns">
-                    <p>&copy; Copyright no one at all. Go to town.</p>
+                <div class="large-4 columns">
+                    <h6 class="subheader">PERCHÈ DOTARSI DI DEFIBRILLATORE</h6>
+                    <ul>
+                        <li><strong>Puoi salvare una vita</strong></li>
+                        <li>Dai al tuo ambiente un'immagine sicura e positiva</li>
+                        <li>Ridurci il rischio di responsabilità civile</li>
+                    </ul>
                 </div>
 
-                <div class="large-3 columns">
-                    <p>&copy; Copyright no one at all. Go to town.</p>
+                <div class="large-4 columns">
+                    <h6 class="subheader">OBBLIGATORIO PER LEGGE</h6>
+                    <p>
+                        A partire dal 27 Aprile 2013 è OBBLIGATORIO per tutte le società sportive dotarsi di defibrillatori<br />
+                        <%= link_to 'Cosa dice la legge', 'cosa-dice-la-legge' %>
+                    </p>
+
                 </div>
 
-                <div class="large-3 columns">
-                    <p>&copy; Copyright no one at all. Go to town.</p>
-                </div>
+                <div class="large-4 columns end">
+                    <img alt="Defibrillatori Philips" src="https://lh3.googleusercontent.com/-g4HJf2yMKsE/U02kMhfilgI/AAAAAAAAl0E/KJAx2bDXdTk/w150-h44-no/logo_piccolo.png">
+                    <br />
+                    <i>Distributore Ufficiale</i><br />
+                    <img src="http://lh3.googleusercontent.com/-UfeQEuo1mqo/U0JAw1w1hPI/AAAAAAAAjLE/nxTVvN283RE/w109-h21-no/mainlogo.gif"><br />
+                    <i>P.IVA: 10574970017</i>
 
-                <div class="large-3 columns">
-                    <p>&copy; Copyright no one at all. Go to town.</p>
                 </div>
-
 
             </div>
         </div>
       </footer>
 
-    <!-- End Footer -->
+    <%= javascript_include_tag  "all" %>
+
+</body>
+
 
 </html>

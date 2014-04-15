@@ -1,58 +1,7 @@
 @import "settings";
 @import "foundation.scss";
 
-.menu {
-  margin-top: rem-calc(4px);
-  margin-bottom: rem-calc(4px);
-  img {
-  }
-}
-
-.small {
-  font-size: em-calc(13px);;
-}
-
-.over {
-top: 120px;
-left: 30px;
-position: absolute;
-    h1  {
-        font-family: 'Open Sans Condensed';
-        font-weight: bold;
-        font-size: em-calc(38px);
-        span {
-        color: #e50000
-        }
-    }
-
-    h2  {
-        font-family: 'Open Sans Condensed';
-        font-weight: bold;
-        font-size: em-calc(25px);
-        span {
-        color: #e50000
-        }
-    }
-}
-
-header {
-  @include grid-row;
-
-  .logo  { @include grid-column($columns:3, $center:true); }
-  padding-bottom: em-calc(10px);
-
-}
-
-footer {
-    p {
-      font-size: rem-calc(13px);
-    }
-
-  img {
-    padding-top: rem-calc(10px);
-    padding-bottom: rem-calc(10px);
-  }
-}
+$numeroVerde-color: #008a2e !default;
 
 $evidence-color: #ffed00 !default;
 
@@ -65,6 +14,69 @@ $wufoo-border-color: darken($panel-bg, 20%) !default;
 $wufoo-header-color: $ctaButton-header-color !default;
 $wufoo-header-margin-top: rem-calc(12) !default;
 $wufoo-header-padding-bottom: rem-calc(12) !default;
+
+.menu {
+  margin-top: rem-calc(4px);
+  margin-bottom: rem-calc(4px);
+}
+
+.small {
+  font-size: em-calc(13px);;
+}
+
+.over {
+top: 50px;
+left: 30px;
+position: absolute;
+    h1  {
+        font-family: 'Open Sans Condensed';
+        font-weight: bold;
+        font-size: em-calc(38px);
+        span {
+        color: #FF0A0A;
+        }
+    }
+
+    h2  {
+        font-family: 'Open Sans Condensed';
+        font-weight: bold;
+        font-size: em-calc(25px);
+        span {
+        color: #FF0A0A;
+        }
+    }
+}
+
+div.box_nverde {
+    text-align: center;
+    line-height: em-calc(35px);
+    font-size: em-calc(18px);
+    color: $numeroVerde-color;
+    margin-bottom: em-calc(18px);
+    .numero {
+        font-size: em-calc(28px);
+    }
+}
+
+header {
+  @include grid-row;
+
+  .logo  { @include grid-column($columns:3, $center:true); }
+  padding-bottom: em-calc(10px);
+
+}
+
+footer {
+    p,li,i {
+      font-size: rem-calc(13px);
+    }
+
+  img {
+    padding-top: rem-calc(10px);
+    padding-bottom: rem-calc(10px);
+  }
+}
+
 
 .wufoo {
     @media #{$small} {
@@ -84,6 +96,7 @@ $wufoo-header-padding-bottom: rem-calc(12) !default;
       text-align: center;
       padding-bottom: $wufoo-header-padding-bottom;
       font-weight: bold;
+      color: #000000;
       .big {
         font-size: rem-calc(23);
       }
@@ -105,6 +118,13 @@ $wufoo-header-padding-bottom: rem-calc(12) !default;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: darken($panel-bg, 20%)
+}
+
+.numero_verde {
+    font-size: rem-calc(55);
+    font-weight: bold;
+    color: $numeroVerde-color;
+    padding: rem-calc(5);
 }
 
 .main-content {
