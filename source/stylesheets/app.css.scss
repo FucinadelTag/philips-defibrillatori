@@ -1,0 +1,127 @@
+@import "settings";
+@import "foundation.scss";
+
+.menu {
+  margin-top: rem-calc(4px);
+  margin-bottom: rem-calc(4px);
+  img {
+  }
+}
+
+.small {
+  font-size: em-calc(13px);;
+}
+
+.over {
+top: 120px;
+left: 30px;
+position: absolute;
+    h1  {
+        font-family: 'Open Sans Condensed';
+        font-weight: bold;
+        font-size: em-calc(38px);
+        span {
+        color: #e50000
+        }
+    }
+
+    h2  {
+        font-family: 'Open Sans Condensed';
+        font-weight: bold;
+        font-size: em-calc(25px);
+        span {
+        color: #e50000
+        }
+    }
+}
+
+header {
+  @include grid-row;
+
+  .logo  { @include grid-column($columns:3, $center:true); }
+  padding-bottom: em-calc(10px);
+
+}
+
+footer {
+    p {
+      font-size: rem-calc(13px);
+    }
+
+  img {
+    padding-top: rem-calc(10px);
+    padding-bottom: rem-calc(10px);
+  }
+}
+
+$evidence-color: #ffed00 !default;
+
+$ctaButton-header-color: $evidence-color !default;
+$ctaButton-radius: 30px !default;
+
+$wufoo-columns: 4 !default;
+$wufoo-has-border: yes !default;
+$wufoo-border-color: darken($panel-bg, 20%) !default;
+$wufoo-header-color: $ctaButton-header-color !default;
+$wufoo-header-margin-top: rem-calc(12) !default;
+$wufoo-header-padding-bottom: rem-calc(12) !default;
+
+.wufoo {
+    @media #{$small} {
+        @include grid-column($wufoo-columns);
+    }
+
+    @if $wufoo-has-border == yes {
+      border-style: solid;
+      border-width: 1px;
+      border-color: $wufoo-border-color;
+      box-shadow: 3px 3px 6px $wufoo-border-color;
+    }
+
+    .header {
+      margin-top: $wufoo-header-margin-top;
+      background-color: $wufoo-header-color;
+      text-align: center;
+      padding-bottom: $wufoo-header-padding-bottom;
+      font-weight: bold;
+      .big {
+        font-size: rem-calc(23);
+      }
+      .medium {
+        font-size: rem-calc(18);
+      }
+      .small {
+        font-size: rem-calc(15);
+      }
+
+    }
+  }
+
+.centerBox {
+    padding: rem-calc(2);
+}
+
+.bottomline {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: darken($panel-bg, 20%)
+}
+
+.main-content {
+  @include grid-row;
+
+  aside  {
+    @include grid-column($columns:6);
+    // @media #{$medium-up} {
+    //   @include grid-column($columns:3);
+    // }
+  }
+
+  article  {
+    @include grid-column($columns:6);
+    // @media #{$medium-up} {
+    //   @include grid-column($columns:8, $offset: 1);
+    // }
+  }
+
+}
