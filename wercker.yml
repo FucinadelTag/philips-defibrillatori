@@ -1,4 +1,4 @@
-box: wercker/ruby2.1.1
+box: pelle/ubuntu12.04-ruby2.1.1@1.0.1
 build:
     steps:
         # Execute the bundle install step, a step provided by wercker
