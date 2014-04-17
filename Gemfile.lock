@@ -69,6 +69,8 @@ GEM
       middleman-core (>= 3.0.2)
       multi_json (~> 1.0)
       rack-livereload
+    middleman-minify-html (3.1.1)
+      middleman-core (~> 3.0)
     middleman-sprockets (3.3.2)
       middleman-core (>= 3.2)
       sprockets (~> 2.2)
@@ -119,4 +121,5 @@ DEPENDENCIES
   fdt_middleman_tools (>= 1.0.0)
   middleman (~> 3.3.2)
   middleman-livereload (~> 3.1.0)
+  middleman-minify-html
   wdm (~> 0.1.0)

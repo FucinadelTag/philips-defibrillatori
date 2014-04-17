@@ -3,6 +3,7 @@
 source 'http://rubygems.org'
 
 gem "middleman", "~>3.3.2"
+gem "middleman-minify-html"
 
 # FdtTools
 gem "fdt_middleman_tools", ">= 1.0.0"
