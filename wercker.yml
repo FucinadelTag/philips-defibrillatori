@@ -1,6 +1,8 @@
-box: pelle/ubuntu12.04-ruby2.1.1@1.0.1
+box: wercker/rvm
 build:
     steps:
+        #USE RUBY 2.1.1
+        - wercker/rvm-use@2.1
         # Execute the bundle install step, a step provided by wercker
         - bundle-install
         # Execute a custom script step.
