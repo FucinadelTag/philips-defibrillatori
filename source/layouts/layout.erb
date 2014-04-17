@@ -6,7 +6,9 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= data.page.title || "Deibrillatori Philips" %></title>
 
-    <meta name="description" content="<%= data.page.metadata.description %>" />
+    <% if current_page.data.metadata.description  %>
+        <meta name="description" content="<%= data.page.metadata.description %>" />
+    <% end %>
 
     <%= stylesheet_link_tag "app", "style" %>
     <%= javascript_include_tag "modernizr" %>
