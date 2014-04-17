@@ -4,7 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= data.page.title || "The Middleman" %></title>
+    <title><%= data.page.title || "Deibrillatori Philips" %></title>
+
+    <meta name="description" content="<%= data.page.metadata.description %>" />
 
     <%= stylesheet_link_tag "app", "style" %>
     <%= javascript_include_tag "modernizr" %>
@@ -12,6 +14,20 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   </head>
+<body class="<%= page_classes %>">
+
+<!-- codice ANALITYCS -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19846103-16', 'defibrillatori-online.com');
+  ga('send', 'pageview');
+
+</script>
+
 
 <!-- Nav Bar -->
 <div class="contain-to-grid menu">
@@ -25,12 +41,11 @@
         <section class="top-bar-section">
             <!-- Right Nav Section -->
             <ul class="right">
-                <li><%= link_to 'Cosa dice la legge', '/pagine/cosa-dice-la-legge' %></li>
-                <li><%= link_to 'Come scegliere', '/pagine/come-scegliere-un-defibrillatore' %></li>
-                <li><%= link_to 'Corsi di Abilitazione', '/pagine/abilitarsi-alluso' %></li>
-                <li><%= link_to 'Defibrillatori Philips', '/pagine/defibrillatori-philips' %></li>
+                <li><%= link_to 'Cosa dice la legge', '/cosa-dice-la-legge' %></li>
+                <li><%= link_to 'Come scegliere', '/come-scegliere-un-defibrillatore' %></li>
+                <li><%= link_to 'Corsi di Abilitazione', '/abilitarsi-alluso' %></li>
+                <li><%= link_to 'Defibrillatori Philips', '/defibrillatori-philips' %></li>
                 <li><%= link_to 'Prezzi', 'prezzi' %></li>
-                <li><%= link_to 'Blog', 'Blog' %></li>
             </ul>
         </section>
     </nav>
@@ -45,13 +60,16 @@
                 </div>
             </div>
         </div>
+        <% if current_page.data.testoTestata  %>
+            <div class="row over">
+                <div class="large-12 hide-for-small">
+                    <%= current_page.data.testoTestata %>
 
-        <div class="row over">
-            <div class="large-12 hide-for-small">
-                <%= current_page.data.testoTestata %>
-                <div class="numero_verde">800 782 217</div>
+                        <div class="numero_verde">800 782 217</div>
+
+                </div>
             </div>
-        </div>
+        <% end %>
 
         <div class="row">
             <div class="large-12 columns show-for-small">
@@ -64,14 +82,14 @@
 <br/>
 
 
-
-<body class="<%= page_classes %>">
-
     <div class="row">
         <div class="large-8 columns">
             <%= yield %>
         </div>
-        <%= partial "partials/wufooForm" %>
+
+        <% if current_page.data.showForm  %>
+            <%= partial "partials/wufooForm" %>
+        <% end %>
     </div>
 
     <footer class="row">
@@ -109,6 +127,27 @@
       </footer>
 
     <%= javascript_include_tag  "all" %>
+
+    <% if current_page.data.conversionCode  %>
+        <%= current_page.data.conversionCode %>
+    <% end %>
+
+<!-- Google Code per il tag di remarketing -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 983718396;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/983718396/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
 
 </body>
 

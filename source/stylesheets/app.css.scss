@@ -5,6 +5,8 @@ $numeroVerde-color: #008a2e !default;
 
 $evidence-color: #ffed00 !default;
 
+$rosso-color: #FF0A0A !default;
+
 $ctaButton-header-color: $evidence-color !default;
 $ctaButton-radius: 30px !default;
 
@@ -21,19 +23,55 @@ $wufoo-header-padding-bottom: rem-calc(12) !default;
 }
 
 .small {
-  font-size: em-calc(13px);;
+  font-size: em-calc(13px);
 }
+
+.veryImportant {
+  font-size: 300%;
+  font-weight: bold;
+  color: $rosso-color;
+}
+
+.banner {
+  background-color: $evidence-color;
+  border-style: solid;
+  border-width: 1px;
+  border-color: darken($panel-bg, 20%);
+  padding: rem-calc(5px);
+  margin-right: rem-calc(5px);
+  .veryImportant {
+    font-size: 500%;
+    font-weight: bold;
+    color: $rosso-color;
+  }
+  .important {
+    font-size: 200%;
+    font-weight: bold;
+    line-height: $paragraph-line-height;
+
+  }
+  .lessImportant {
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+}
+
+
+
 
 .over {
 top: 50px;
 left: 30px;
 position: absolute;
+padding: em-calc(10px);
+background-color: rgba(255, 255, 255, 0.8);
     h1  {
         font-family: 'Open Sans Condensed';
         font-weight: bold;
         font-size: em-calc(38px);
         span {
-        color: #FF0A0A;
+        color: $rosso-color;
         }
     }
 
@@ -42,7 +80,7 @@ position: absolute;
         font-weight: bold;
         font-size: em-calc(25px);
         span {
-        color: #FF0A0A;
+        color: $rosso-color;
         }
     }
 }
@@ -75,6 +113,23 @@ footer {
     padding-top: rem-calc(10px);
     padding-bottom: rem-calc(10px);
   }
+}
+
+.evidenza {
+  background-color: lighten($wufoo-header-color, 30%);
+  padding: rem-calc(7px) rem-calc(12px);
+  font-weight: bold;
+  -moz-transform: rotate(-1deg);
+  -webkit-transform: rotate(-1deg);
+  -o-transform: rotate(-1deg);
+  -ms-transform: rotate(-1deg);
+  font-size: 130%;
+  text-align: center;
+  margin-bottom: rem-calc(12px);
+}
+
+.italic {
+  font-style: italic;
 }
 
 
@@ -117,8 +172,9 @@ footer {
 .bottomline {
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-bottom-color: darken($panel-bg, 20%)
+    border-bottom-color: darken($panel-bg, 20%);
 }
+
 
 .numero_verde {
     font-size: rem-calc(55);
