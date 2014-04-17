@@ -2,7 +2,7 @@ box: wercker/rvm
 build:
     steps:
         #USE RUBY 2.1.1
-        - wercker/rvm-use@2.1
+        - wercker/rvm-use@2.1.0
         # Execute the bundle install step, a step provided by wercker
         - bundle-install
         # Execute a custom script step.
