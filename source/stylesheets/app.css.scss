@@ -17,6 +17,58 @@ $wufoo-header-color: $ctaButton-header-color !default;
 $wufoo-header-margin-top: rem-calc(12) !default;
 $wufoo-header-padding-bottom: rem-calc(12) !default;
 
+
+
+.blog-metadata{
+    margin-bottom: rem-calc(10px);
+    font-size: 80%;
+    font-style: italic;
+}
+
+.index {
+  img {
+    padding-bottom: rem-calc(0px);
+  }
+}
+
+.blog {
+    .abstract{
+        font-style: italic;
+        color: scale-color($body-font-color, $lightness: 35%);
+        margin-top: rem-calc(10px);
+    }
+    .padding {
+        padding-bottom: rem-calc(20px);
+    }
+    h3 {
+      font-size: 140%;
+    }
+
+}
+
+.my-orbit-caption {
+    @extend .orbit-caption;
+    a {
+      color: #ffffff
+    }
+    @if $orbit-caption-position == "top" {
+        position: absolute;
+        top: 0;
+    }
+}
+
+.slide {
+        padding-bottom: rem-calc(20px);
+        .over {
+          top: 250px;
+        }
+    }
+
+.indirizzo {
+    font-size: rem-calc(12);
+    line-height: rem-calc(20);
+}
+
 .menu {
   margin-top: rem-calc(4px);
   margin-bottom: rem-calc(4px);

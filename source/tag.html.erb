@@ -1,0 +1,40 @@
+---
+layout: blog
+pageable: true
+per_page: 12
+---
+Elenco articoli: <strong><%= tagname %></strong>
+
+<% if paginate && num_pages > 1 %>
+  <p>Page <%= page_number %> of <%= num_pages %></p>
+
+  <% if prev_page %>
+    <p><%= link_to 'Previous page', prev_page %></p>
+  <% end %>
+<% end %>
+<p>
+<ul class="large-block-grid-1">
+  <% page_articles.each_with_index do |article, i| %>
+    <li>
+        <article>
+            <div class="row">
+                <div class="large-12 columns">
+                    <%= partial(:header_post, :locals => { :article => article}) %>
+                    <% link_to article do %>
+                        <%= tag :img, :src => article.metadata[:page]["image"], :title => article.title %>
+                    <% end %>
+                    <%= article.summary %>
+                    <%= link_to 'Leggi tutto…', article %>
+                </div>
+            </div>
+        </article>
+    </li>
+  <% end %>
+</ul>
+</p>
+
+<% if paginate %>
+  <% if next_page %>
+    <p><%= link_to 'Next page', next_page %></p>
+  <% end %>
+<% end %>

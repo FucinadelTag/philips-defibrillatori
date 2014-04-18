@@ -74,8 +74,49 @@ end
 #   end
 # end
 
+activate :livereload
+activate :directory_indexes
+
+activate :blog do |blog|
+    # This will add a prefix to all links, template references and source paths
+    # blog.prefix = "blog"
+
+    # blog.permalink = "{year}/{month}/{day}/{title}.html"
+    # Matcher for blog source files
+    # blog.sources = "{year}-{month}-{day}-{title}.html"
+    # blog.taglink = "tags/{tag}.html"
+    # blog.layout = "main"
+    # blog.summary_separator = /(READMORE)/
+    # blog.summary_length = 250
+    # blog.year_link = "{year}.html"
+    # blog.month_link = "{year}/{month}.html"
+    # blog.day_link = "{year}/{month}/{day}.html"
+    blog.default_extension = ".erb"
+
+    blog.tag_template = "tag.html"
+    blog.calendar_template = "calendar.html"
+    blog.sources = "/blog/{category}/{year}-{month}-{day}-{title}.html"
+    blog.permalink = "/blog/{category}/{year}-{month}-{day}-{title}.html"
+
+    # Enable pagination
+    blog.paginate = true
+    blog.per_page = 10
+    blog.page_link = "page/{num}"
+
+    blog.custom_collections = {
+        category: {
+            link: '/blog/categories/{category}.html',
+            template: '/category.html'
+        }
+    }
+end
+
+page "/feed.xml", layout: false
+page "pagine/*", :layout => :page
+page "blog/*", :layout => :blog
+
 activate :relative_assets
-set :relative_links, true
+set :relative_links, false
 
 # Add bower's directory to sprockets asset path
 after_configuration do
@@ -89,8 +130,8 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
-activate :livereload
-activate :directory_indexes
+set :partials_dir, 'partials'
+
 
 
 # Build-specific configuration

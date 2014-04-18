@@ -1,0 +1,45 @@
+<% wrap_layout :layout do %>
+
+    <div class="row">
+        <div class="large-12 medium-12 columns">
+            <div class="row">
+                <div class="large-12 hide-for-small">
+                    <div id="featured">
+                        <%= tag :img, :src => current_page.data.immagineTestata, :title => current_page.data.title %>
+                    </div>
+                </div>
+            </div>
+            <% if current_page.data.testoTestata  %>
+                <div class="row over">
+                    <div class="large-12 hide-for-small">
+                        <%= current_page.data.testoTestata %>
+
+                            <div class="numero_verde">800 782 217</div>
+
+                    </div>
+                </div>
+            <% end %>
+
+            <div class="row">
+                <div class="large-12 columns show-for-small">
+                    <img src="http://placehold.it/1200x700&text=Mobile Header">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br/>
+
+
+    <div class="row">
+        <div class="large-8 medium-8 columns">
+            <%= yield %>
+        </div>
+
+        <% if current_page.data.showForm  %>
+            <%= partial "wufooForm" %>
+        <% end %>
+    </div>
+
+
+<% end %>
