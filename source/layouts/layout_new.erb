@@ -1,0 +1,147 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= data.page.title || "Deibrillatori Philips" %></title>
+
+    <% if current_page.data.metadata  %>
+        <meta name="description" content="<%= current_page.data.metadata.description %>" />
+    <% end %>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <%= stylesheet_link_tag "app", "style" %>
+    <%= javascript_include_tag "modernizr" %>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  </head>
+<body class="<%= page_classes %>">
+
+<!-- codice ANALITYCS -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19846103-16', 'defibrillatori-online.com');
+  ga('send', 'pageview');
+
+</script>
+
+
+<!-- Nav Bar -->
+<div class="contain-to-grid menu">
+    <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+            <li class="name">
+                <!--http://lh6.googleusercontent.com/-34YbdpE2f6c/U0025W216cI/AAAAAAAAlzE/-OIpzXG15X4/w160-h60-no/logo.png -->
+                <a href="/"><img alt="Defibrillatori Philips" src="http://lh6.googleusercontent.com/-34YbdpE2f6c/U0025W216cI/AAAAAAAAlzE/-OIpzXG15X4/w160-h60-no/logo.png"></a>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
+        <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+                <li><%= link_to 'Cosa dice la legge', '/cosa-dice-la-legge' %></li>
+                <li><%= link_to 'Come scegliere', '/come-scegliere-un-defibrillatore' %></li>
+                <li><%= link_to 'Corsi di Abilitazione', '/abilitarsi-alluso' %></li>
+                <li><%= link_to 'Defibrillatori Philips', '/defibrillatori-philips' %></li>
+                <li><%= link_to 'Prezzi', '/prezzi' %></li>
+            </ul>
+        </section>
+    </nav>
+</div>
+
+<%= yield %>
+
+<footer class="row">
+    <div class="large-12 medium-12 columns"><hr>
+        <div class="row">
+            <div class="large-2 medium-4 columns">
+                <img alt="Defibrillatori Philips" src="http://lh3.googleusercontent.com/-UfeQEuo1mqo/U0JAw1w1hPI/AAAAAAAAjLE/nxTVvN283RE/w109-h21-no/mainlogo.gif">
+            </div>
+
+            <div class="large-4 medium-4 columns">
+                <h6 class="subheader">PERCHÈ DOTARSI DI DEFIBRILLATORE</h6>
+                <ul>
+                    <li><strong>Puoi salvare una vita</strong></li>
+                    <li>Dai al tuo ambiente un'immagine sicura e positiva</li>
+                    <li>Riduci il rischio di responsabilità civile</li>
+                </ul>
+            </div>
+
+            <div class="large-4 medium-4 columns">
+                <h6 class="subheader">OBBLIGATORIO PER LEGGE</h6>
+                <p>
+                    A partire dal 27 Aprile 2013 è OBBLIGATORIO per tutte le società sportive dotarsi di defibrillatori<br />
+                    <%= link_to 'Cosa dice la legge', '/cosa-dice-la-legge' %>
+                </p>
+
+            </div>
+
+            <div class="large-2 medium-4 columns end">
+                <i>Distributore Ufficiale</i><br />
+                <img alt="Defibrillatori Philips" src="https://lh3.googleusercontent.com/-g4HJf2yMKsE/U02kMhfilgI/AAAAAAAAl0E/KJAx2bDXdTk/w150-h44-no/logo_piccolo.png">
+                <br />
+                <i>P.IVA: 10574970017</i>
+
+            </div>
+
+        </div>
+    </div>
+  </footer>
+
+<%= javascript_include_tag  "all" %>
+
+<!-- begin olark code -->
+<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+f[z]=function(){
+(a.s=a.s||[]).push(arguments)};var a=f[z]._={
+},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+0:+new Date};a.P=function(u){
+a.p[u]=new Date-a.p[0]};function s(){
+a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+b.contentWindow[g].open()}catch(w){
+c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('9324-181-10-5284');/*]]>*/</script><noscript><a href="https://www.olark.com/site/9324-181-10-5284/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+<!-- end olark code -->
+
+<% if current_page.data.conversionCode  %>
+    <%= current_page.data.conversionCode %>
+<% end %>
+
+
+<!-- Google Code per il tag di remarketing -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 983718396;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/983718396/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+
+</body>
+
+
+</html>

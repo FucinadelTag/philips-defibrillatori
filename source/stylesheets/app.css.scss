@@ -120,9 +120,8 @@ top: 50px;
 left: 30px;
 position: absolute;
 padding: em-calc(10px);
-background-color: rgba(255, 255, 255, 0.8);
+background-color: rgba(255, 255, 255, 1);
     h1  {
-        font-family: 'Open Sans Condensed';
         font-weight: bold;
         font-size: em-calc(38px);
         span {
@@ -131,7 +130,6 @@ background-color: rgba(255, 255, 255, 0.8);
     }
 
     h2  {
-        font-family: 'Open Sans Condensed';
         font-weight: bold;
         font-size: em-calc(25px);
         span {
@@ -191,6 +189,44 @@ footer {
 .wufoo {
     @media #{$small} {
         @include grid-column($wufoo-columns);
+    }
+
+    @if $wufoo-has-border == yes {
+      border-style: solid;
+      border-width: 1px;
+      border-color: $wufoo-border-color;
+      box-shadow: 3px 3px 6px $wufoo-border-color;
+    }
+
+    .header {
+      margin-top: $wufoo-header-margin-top;
+      background-color: $wufoo-header-color;
+      text-align: center;
+      padding-top: $wufoo-header-padding-bottom;
+      padding-bottom: $wufoo-header-padding-bottom;
+      font-weight: bold;
+      color: #000000;
+      .big {
+        font-size: rem-calc(19);
+      }
+      .medium {
+        font-size: rem-calc(18);
+      }
+      .small {
+        font-size: rem-calc(15);
+      }
+
+    }
+  }
+
+.ctaButton {
+  @include button($bg: $ctaButton-header-color, $radius: $ctaButton-radius, $full-width: false);
+  @include inset-shadow();
+}
+
+.wufooNew {
+    @media #{$small} {
+        @include grid-column(7);
     }
 
     @if $wufoo-has-border == yes {
