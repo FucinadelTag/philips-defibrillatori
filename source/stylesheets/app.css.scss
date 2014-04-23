@@ -95,7 +95,7 @@ $wufoo-header-padding-bottom: rem-calc(12) !default;
   padding: rem-calc(5px);
   margin-right: rem-calc(5px);
   .veryImportant {
-    font-size: 500%;
+    font-size: 480%;
     font-weight: bold;
     color: $rosso-color;
   }
@@ -113,15 +113,20 @@ $wufoo-header-padding-bottom: rem-calc(12) !default;
 }
 
 
-
+ul.small {
+  p, li {
+    font-size: 105%;
+  }
+}
 
 .over {
 top: 50px;
 left: 30px;
 position: absolute;
 padding: em-calc(10px);
-background-color: rgba(255, 255, 255, 1);
+background-color: rgba(255, 255, 255, 0.9);
     h1  {
+        font-family: 'Open Sans Condensed';
         font-weight: bold;
         font-size: em-calc(38px);
         span {
@@ -130,6 +135,7 @@ background-color: rgba(255, 255, 255, 1);
     }
 
     h2  {
+        font-family: 'Open Sans Condensed';
         font-weight: bold;
         font-size: em-calc(25px);
         span {
