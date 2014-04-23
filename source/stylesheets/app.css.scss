@@ -204,11 +204,12 @@ footer {
       margin-top: $wufoo-header-margin-top;
       background-color: $wufoo-header-color;
       text-align: center;
+      padding-top: $wufoo-header-padding-bottom;
       padding-bottom: $wufoo-header-padding-bottom;
       font-weight: bold;
       color: #000000;
       .big {
-        font-size: rem-calc(23);
+        font-size: rem-calc(19);
       }
       .medium {
         font-size: rem-calc(18);
