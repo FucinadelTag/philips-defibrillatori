@@ -70,8 +70,11 @@ $wufoo-header-padding-bottom: rem-calc(12) !default;
 }
 
 .menu {
-  margin-top: rem-calc(4px);
-  margin-bottom: rem-calc(4px);
+  margin-top: rem-calc(2px);
+  margin-bottom: rem-calc(2px);
+  img {
+    padding-top: rem-calc(2px);
+  }
 }
 
 .small {
