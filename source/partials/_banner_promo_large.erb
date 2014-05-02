@@ -1,17 +1,31 @@
 <div class="banner">
     <div class="row">
 
-        <div class="small-6 columns">
-            <span class="veryImportant">38% Sconto </span><br />
-        </div>
+        <% if bannerType == 'discount' %>
 
-        <div class="small-6 columns hide-for-small">
-            <span class="important">Fino al 15 Maggio 2014</span><br />
-            <span class="lessImportant">Non perdere tempo. Calcola il tuo preventivo!</span>
-            </span>
+            <div class="small-6 columns">
+                <span class="veryImportant">38% Sconto </span><br />
+            </div>
 
-        </div>
+            <div class="small-6 columns hide-for-small">
+                <span class="important">Fino al 15 Maggio 2014</span><br />
+                <span class="lessImportant">Non perdere tempo. Calcola il tuo preventivo!</span>
+            </div>
 
+        <% end %>
+
+        <% if bannerType == 'philips' %>
+
+            <div class="small-5 columns hide-for-small">
+                <span class="veryImportant">1.000.000 </span><br />
+            </div>
+
+            <div class="small-7 columns hide-for-small">
+                <span class="important">Defibrillatori Philips in uso oggi!</span><br />
+                <span class="lessImportant">Semplici, Affidabili, Intuitivi. La miglior scelta possibile</span>
+            </div>
+
+        <% end %>
 
 
 
