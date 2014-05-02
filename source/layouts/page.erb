@@ -38,7 +38,7 @@
 
         <% if current_page.data.showForm  %>
             <div class="wufoo columns">
-                <%= partial "wufooForm" %>
+                <%= partial("wufooForm", :locals => { :showForm => current_page.data.showForm}) %>
                 <div class="box_nverde">
                     <span>Oppure chiama il Numero Verde</span><br />
                     <span class="numero"> 800 782 217 </span><br />
