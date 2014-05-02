@@ -45,7 +45,7 @@
             <div id="formContatti" class="row">
 
                 <div class="wufooNew columns hide-for-small">
-                    <%= partial "wufooForm" %>
+                    <%= partial("wufooForm", :locals => { :showForm => current_page.data.showForm}) %>
                 </div>
 
                 <div class="large-5 medium-5 columns">

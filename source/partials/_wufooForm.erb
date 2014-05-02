@@ -2,6 +2,32 @@
     <span class="big"><%= data.page.testataForm.prima || "RICHIEDI" %></span><br />
     <span class="medium"><%= data.page.testataForm.seconda || "UN PREVENTIVO GRATUITO" %></span>
 </p>
+
+<% if showForm == 'consumabili' %>
+
+    <div id="wufoo-r1bv6w7n0mdrfqk">
+        Fill out my <a href="https://fucinadeltag.wufoo.com/forms/r1bv6w7n0mdrfqk">online form</a>.
+    </div>
+    <script type="text/javascript">var r1bv6w7n0mdrfqk;(function(d, t) {
+        var s = d.createElement(t), options = {
+        'userName':'fucinadeltag',
+        'formHash':'r1bv6w7n0mdrfqk',
+        'autoResize':true,
+        'height':'641',
+        'async':true,
+        'host':'wufoo.com',
+        'header':'hide',
+        'ssl':false};
+        s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+        s.onload = s.onreadystatechange = function() {
+        var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+        try { r1bv6w7n0mdrfqk = new WufooForm();r1bv6w7n0mdrfqk.initialize(options);r1bv6w7n0mdrfqk.display(); } catch (e) {}};
+        var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+        })(document, 'script');
+    </script>
+
+<% else %>
+
 <div id="wufoo-q1wf0tmg16ukwpv">
     Fill out my <a href="https://fucinadeltag.wufoo.com/forms/q1wf0tmg16ukwpv">online form</a>.
 </div>
@@ -22,3 +48,5 @@
         var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
         })(document, 'script');
     </script>
+
+<% end %>
