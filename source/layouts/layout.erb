@@ -18,6 +18,10 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
+    <% if current_page.data.headCode  %>
+        <%= current_page.data.headCode %>
+    <% end %>
+
   </head>
 <body class="<%= page_classes %>">
 
