@@ -1,3 +1,6 @@
+# Prismic
+#require 'prismic/lib/prismic.rb'
+#require 'prismic/lib/command/sync_blog.rb'
 ###
 # Compass
 ###
@@ -154,4 +157,9 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+activate :prismic_middleman do |f|
+  f.url = 'https://philips-defibrillatori.prismic.io/api'
+  f.new_article_template = "fdt_templates/blog.tt"
 end

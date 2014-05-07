@@ -1,3 +1,9 @@
+PATH
+  remote: prismic_middleman
+  specs:
+    prismic_middleman (0.0.1)
+      middleman-core (>= 3.3.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -89,6 +95,7 @@ GEM
       tilt (~> 1.4.1)
     padrino-support (0.12.1)
       activesupport (>= 3.1)
+    prismic.io (1.0.0.rc6)
     rack (1.5.2)
     rack-livereload (0.3.15)
       rack
@@ -128,4 +135,6 @@ DEPENDENCIES
   middleman-blog (~> 3.5.1)
   middleman-livereload (~> 3.1.0)
   middleman-minify-html
+  prismic.io
+  prismic_middleman!
   wdm (~> 0.1.0)
