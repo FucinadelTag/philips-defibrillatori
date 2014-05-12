@@ -18,9 +18,13 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
+
     <% if current_page.data.headCode  %>
         <%= current_page.data.headCode %>
     <% end %>
+
+    <%= javascript_include_tag  "all" %>
+
 
   </head>
 <body class="<%= page_classes %>">
@@ -44,7 +48,7 @@
         <ul class="title-area">
             <li class="name">
                 <!--http://lh6.googleusercontent.com/-34YbdpE2f6c/U0025W216cI/AAAAAAAAlzE/-OIpzXG15X4/w160-h60-no/logo.png -->
-                <a href="/"><img alt="Defibrillatori Philips" src="http://lh6.googleusercontent.com/-34YbdpE2f6c/U0025W216cI/AAAAAAAAlzE/-OIpzXG15X4/w160-h60-no/logo.png"></a>
+                <a href="/"><img alt="Defibrillatori Philips" src="http://lh6.googleusercontent.com/-34YbdpE2f6c/U0025W216cI/AAAAAAAAlzE/-OIpzXG15X4/h50-no/logo.png"></a>
             </li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
         </ul>
@@ -52,10 +56,16 @@
             <!-- Right Nav Section -->
             <ul class="right">
                 <li><%= link_to 'Defibrillatori Philips', '/' %></li>
-                <li><%= link_to 'Consumabili', '/consumabili-accessori' %></li>
+                <li><%= link_to 'Accessori', '/consumabili-accessori' %></li>
                 <li><%= link_to 'Come scegliere', '/come-scegliere-un-defibrillatore' %></li>
-                <li><%= link_to 'Cosa dice la legge', '/cosa-dice-la-legge' %></li>
-                <li><%= link_to 'Corsi di Abilitazione', '/abilitarsi-alluso' %></li>
+                <li class="has-dropdown">
+                        <a href="/blog"><%= link_to 'Approfondimenti', '/blog' %></a>
+                        <ul class="dropdown">
+                            <li><%= link_to 'Magazine', '/blog' %></li>
+                            <li><%= link_to 'Cosa dice la legge', '/cosa-dice-la-legge' %></li>
+                            <li><%= link_to 'Corsi di Abilitazione', '/abilitarsi-alluso' %></li>
+                        </ul>
+                </li>
                 <!-- <li><%= link_to 'Prezzi', '/prezzi' %></li> -->
             </ul>
         </section>
@@ -102,7 +112,17 @@
     </div>
   </footer>
 
-<%= javascript_include_tag  "all" %>
+
+<script type="text/javascript">
+
+        var exampleObject = new manageReferrerCampaign();
+
+        campaignData = exampleObject.saveCampaignData ();
+
+        console.log(exampleObject.getCampaignData ());
+
+
+    </script>
 
 <!-- begin olark code -->
 <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
@@ -163,6 +183,8 @@ var google_remarketing_only = true;
 <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/983718396/?value=0&amp;guid=ON&amp;script=0"/>
 </div>
 </noscript>
+
+<%= javascript_include_tag  "all" %>
 
 
 </body>

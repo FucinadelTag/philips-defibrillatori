@@ -3,6 +3,15 @@
     <span class="medium"><%= data.page.testataForm.seconda || "UN PREVENTIVO GRATUITO" %></span>
 </p>
 
+<script type="text/javascript">
+
+    exampleObject = new manageReferrerCampaign();
+
+    campaignDataString = encodeURI (exampleObject.getDataForDefaultValue());
+
+
+</script>
+
 <% if showForm == 'consumabili' %>
 
     <div id="wufoo-r1bv6w7n0mdrfqk">
@@ -17,6 +26,7 @@
         'async':true,
         'host':'wufoo.com',
         'header':'hide',
+        'defaultValues':'field451='+ campaignDataString + "",
         'ssl':false};
         s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
         s.onload = s.onreadystatechange = function() {
@@ -40,6 +50,7 @@
         'async':true,
         'host':'wufoo.com',
         'header':'hide',
+        'defaultValues':'field451='+ campaignDataString + "",
         'ssl':false};
         s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
         s.onload = s.onreadystatechange = function() {
