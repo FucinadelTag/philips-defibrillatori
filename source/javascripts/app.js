@@ -5,7 +5,8 @@ function manageReferrerCampaign () {
         generic: {
                     utm_source: 'source',
                     utm_medium: 'medium',
-                    utm_campaign: 'campaign'
+                    utm_campaign: 'campaign',
+                    gclid: 'gclid'
                 }
     };
 
@@ -72,12 +73,9 @@ function manageReferrerCampaign () {
     }
 };
 
-
 var exampleObject = new manageReferrerCampaign();
 
 $(".wufooNew").html($(".wufooNew").html().replace('::field451Data::', encodeURI(exampleObject.getDataForDefaultValue())));
-
-//console.log ($(".wufooNew").html());
 
 $(document).foundation();
 
