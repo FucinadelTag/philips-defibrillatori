@@ -51,7 +51,6 @@ function manageReferrerCampaign () {
     {
         if (!localStorage.campaignData ||  jQuery.isEmptyObject(JSON.parse(localStorage.campaignData)))
         {
-            alert ('palla');
             this.saveCampaignData ();
         }
         campaignData = JSON.parse(localStorage.campaignData);
