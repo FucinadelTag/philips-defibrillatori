@@ -23,8 +23,6 @@
         <%= current_page.data.headCode %>
     <% end %>
 
-    <%= javascript_include_tag  "all" %>
-
 
   </head>
 <body class="<%= page_classes %>">
@@ -112,17 +110,6 @@
     </div>
   </footer>
 
-
-<script type="text/javascript">
-
-        var exampleObject = new manageReferrerCampaign();
-
-        campaignData = exampleObject.saveCampaignData ();
-
-        console.log(exampleObject.getCampaignData ());
-
-
-    </script>
 
 <!-- begin olark code -->
 <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){

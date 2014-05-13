@@ -1,5 +1,3 @@
-$(document).foundation();
-
 function manageReferrerCampaign () {
 
     var paramsToGet = {
@@ -27,7 +25,6 @@ function manageReferrerCampaign () {
 
             paramValue = getParameterByName(key);
 
-
             if (paramValue)
             {
                 campaignObject[value] = paramValue;
@@ -40,27 +37,22 @@ function manageReferrerCampaign () {
 
     this.saveCampaignData = function ()
     {
-        if (localStorage.campaignData)
-        {
-            return this.getCampaignData ();
-        }
-        else
-        {
             campaignData = this.getCampaignData ();
 
             localStorage.campaignData = JSON.stringify(campaignData);
 
             return campaignData;
-        }
+
 
 
     };
 
-    this.getCampaignData = function ()
+    this.getCampaignDataStored = function ()
     {
-        if (!localStorage.campaignData)
+        if (!localStorage.campaignData ||  jQuery.isEmptyObject(JSON.parse(localStorage.campaignData)))
         {
-            return {};
+            alert ('palla');
+            this.saveCampaignData ();
         }
         campaignData = JSON.parse(localStorage.campaignData);
 
@@ -69,7 +61,7 @@ function manageReferrerCampaign () {
 
     this.getDataForDefaultValue = function ()
     {
-        campaignData = this.getCampaignData ();
+        campaignData = this.getCampaignDataStored ();
 
         campagnString = '';
 
@@ -80,3 +72,15 @@ function manageReferrerCampaign () {
         return campagnString;
     }
 };
+
+
+var exampleObject = new manageReferrerCampaign();
+
+$(".wufooNew").html($(".wufooNew").html().replace('::field451Data::', encodeURI(exampleObject.getDataForDefaultValue())));
+
+//console.log ($(".wufooNew").html());
+
+$(document).foundation();
+
+
+
