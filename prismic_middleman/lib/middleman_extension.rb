@@ -1,1 +1,0 @@
-require 'prismic_middleman'

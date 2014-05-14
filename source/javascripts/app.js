@@ -75,7 +75,13 @@ function manageReferrerCampaign () {
 
 var exampleObject = new manageReferrerCampaign();
 
-$(".wufooNew").html($(".wufooNew").html().replace('::field451Data::', encodeURI(exampleObject.getDataForDefaultValue())));
+var stringCampaign = encodeURI(exampleObject.getDataForDefaultValue());
+
+if($(".wufooNew").length)
+{
+    $(".wufooNew").html($(".wufooNew").html().replace('::field451Data::', stringCampaign));
+}
+
 
 $(document).foundation();
 
