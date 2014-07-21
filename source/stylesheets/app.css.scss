@@ -81,6 +81,17 @@ $wufoo-header-padding-bottom: rem-calc(12) !default;
   font-size: em-calc(13px);
 }
 
+.marchi {
+  p {
+    font-size: em-calc(13px);
+    font-style: italic;
+    color: scale-color($body-font-color, $lightness: 35%);
+  }
+  img {
+    padding-bottom: rem-calc(3px);
+  }
+}
+
 .veryImportant {
   font-size: 300%;
   font-weight: bold;
