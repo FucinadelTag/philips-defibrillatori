@@ -18,6 +18,8 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
+    <meta name="prismic-api" content="https://philips-defibrillatori.prismic.io/api">
+
 
     <% if current_page.data.headCode  %>
         <%= current_page.data.headCode %>
@@ -179,6 +181,13 @@ var google_remarketing_only = true;
 </noscript>
 
 <%= javascript_include_tag  "all" %>
+
+<script type="text/javascript">
+    var url = $.url();
+    var param = url.param('t');
+
+</script>
+
 
 
 </body>
