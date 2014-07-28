@@ -3,7 +3,7 @@
     <div class="row">
         <div class="large-12 medium-12 columns">
             <div class="row">
-                <div class="large-12 hide-for-small">
+                <div class="large-12 columns hide-for-small">
                     <div id="featured">
                         <%= tag :img, :src => current_page.data.immagineTestata, :title => current_page.data.title %>
                     </div>
@@ -22,7 +22,7 @@
 
             <div class="row">
                 <div class="large-12 columns show-for-small">
-                    <img src="http://placehold.it/1200x700&text=Mobile Header">
+                    <%= current_page.data.testoTestata %>
                 </div>
             </div>
         </div>
