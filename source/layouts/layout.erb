@@ -192,9 +192,14 @@ var google_remarketing_only = true;
             if (err) { console.log(err); return; }
             Api.form('everything').ref(Api.master()).query('[[:d = fulltext(my.testate-pagine.target, "'+ param +'")]]').submit(function(err, documents) {
                 if (err) { console.log(err); return; }
-                $('#prima-linea').html(documents.results[0].getText('testate-pagine.prima-linea'));
-                $('#seconda-linea').html(documents.results[0].getText('testate-pagine.seconda-linea'));
-                $('#image-testata').attr("src", documents.results[0].getImageView('testate-pagine.image', 'wide').url);
+                if (documents.results.length > 0)
+                {
+                    $('#prima-linea').html(documents.results[0].getText('testate-pagine.prima-linea'));
+                    $('#seconda-linea').html(documents.results[0].getText('testate-pagine.seconda-linea'));
+                    $('#image-testata').attr("src", documents.results[0].getImageView('testate-pagine.image', 'wide').url);
+
+                }
+
 
             });
         });
