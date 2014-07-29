@@ -4,3 +4,4 @@
 //= require app
 //= require script
 //= require purl
+//= require prismic.io-1.0.12.min
