@@ -182,44 +182,9 @@ var google_remarketing_only = true;
 
 <%= javascript_include_tag  "all" %>
 
-<script type="text/javascript">
-    var paramOk = undefined;
-    var url = $.url();
-    var param = url.param('t');
-
-    if (param)
-    {
-        paramOk = param
-        $.cookie('target', param), { expires: 60 };
-    }
-    else
-    {
-        paramOk = ($.cookie('target'));
-    }
-
-    if (paramOk)
-    {
-        Prismic.Api("https://philips-defibrillatori.prismic.io/api", function(err, Api) {
-            if (err) { console.log(err); return; }
-            Api.form('everything').ref(Api.master()).query('[[:d = fulltext(my.testate-pagine.target, "'+ paramOk +'")]]').submit(function(err, documents) {
-                if (err) { console.log(err); return; }
-                if (documents.results.length > 0)
-                {
-                    $('#prima-linea').html(documents.results[0].getText('testate-pagine.prima-linea'));
-                    $('#seconda-linea').html(documents.results[0].getText('testate-pagine.seconda-linea'));
-                    $('#image-testata').attr("src", documents.results[0].getImageView('testate-pagine.image', 'wide').url);
-
-                }
-
-
-            });
-        });
-
-    }
-
-
-
-</script>
+<% if current_page.data.javacriptCode  %>
+    <%= current_page.data.javacriptCode %>
+<% end %>
 
 
 
