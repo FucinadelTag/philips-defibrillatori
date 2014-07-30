@@ -61,6 +61,10 @@ function manageHeader () {
 
 
         }
+        else
+        {
+            headerData[paramOk] = {};
+        }
 
         $.cookie('headerData', headerData, { expires: 30 });
 
