@@ -81,7 +81,11 @@
     <hr>
     <div class="large-12 medium-12 columns">
 
-    <%= partial("formContatti", :locals => { :showForm => current_page.data.showForm}) %>
+    <% if current_page.data.showForm  %>
+
+        <%= partial("formContatti", :locals => { :showForm => current_page.data.showForm}) %>
+
+    <% end %>
 
     <%= partial("banner_promo_large", :locals => { :bannerType => 'philips'}) %>
 
