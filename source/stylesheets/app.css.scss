@@ -105,6 +105,12 @@ $wufoo-header-padding-bottom: rem-calc(12) !default;
   border-color: darken($panel-bg, 20%);
   padding: rem-calc(5px);
   margin-right: rem-calc(5px);
+  a {
+    color: $body-font-color;
+    &:hover {
+      color: lighten($body-font-color, 30%);
+    }
+  }
   .veryImportant {
     font-size: 480%;
     font-weight: bold;
@@ -118,6 +124,10 @@ $wufoo-header-padding-bottom: rem-calc(12) !default;
   }
   .lessImportant {
     font-size: 120%;
+    font-weight: bold;
+  }
+  .little {
+    font-size: 110%;
     font-weight: bold;
   }
 

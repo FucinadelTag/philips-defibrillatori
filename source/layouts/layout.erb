@@ -75,8 +75,22 @@
 
 <%= yield %>
 
+
+
+<div class="row">
+    <hr>
+    <div class="large-12 medium-12 columns">
+
+    <%= partial("formContatti", :locals => { :showForm => current_page.data.showForm}) %>
+
+    <%= partial("banner_promo_large", :locals => { :bannerType => 'philips'}) %>
+
+    </div>
+</div>
+
 <footer class="row">
-    <div class="large-12 medium-12 columns"><hr>
+    <div class="large-12 medium-12 columns">
+    <hr>
         <div class="row">
             <div class="large-2 medium-2 columns">
                 <img alt="Defibrillatori Philips" src="http://lh6.googleusercontent.com/-znUVyJZm73E/U3mY94YJ0WI/AAAAAAAAmRo/JR4IpRmwXHg/h61-no/distributore_ufficiale.png">
