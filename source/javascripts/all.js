@@ -7,6 +7,6 @@
 
 //= require app
 
-
-
 //= require manageHeader
+
+//= require_tree ./explorer_8_fix/.
