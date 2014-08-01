@@ -16,23 +16,16 @@ metadata:
 
 <ul class="large-block-grid-2 medium-block-grid-2">
 <% page_articles.each_with_index do |article, i| %>
-
-
     <li>
         <article>
-            <div class="row">
-                <div class="large-12 columns">
-                    <% link_to article do %>
-                        <%= tag :img, :src => article.metadata[:page]["image"], :title => article.title %>
-                    <% end %>
-                    <%= partial("header_post", :locals => { :article => article}) %>
-                    <%= article.summary %>
-                    <%= link_to 'Leggi tutto…', article %>
-                </div>
-            </div>
+            <% link_to article do %>
+                <%= tag :img, :src => article.metadata[:page]["image"], :title => article.title %>
+            <% end %>
+            <%= partial("header_post", :locals => { :article => article}) %>
+            <%= article.summary %>
+            <%= link_to 'Leggi tutto…', article %>
         </article>
     </li>
-
 <% end %>
 </ul>
 
