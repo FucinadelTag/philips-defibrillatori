@@ -28,7 +28,35 @@
         })(document, 'script');
     </script>
 
-<% else %>
+<% end %>
+
+<% if showForm == 'sport' %>
+
+<div id="wufoo-r19afkvl1rcfzph">
+Fill out my <a href="https://fucinadeltag.wufoo.com/forms/r19afkvl1rcfzph">online form</a>.
+</div>
+    <script type="text/javascript">var r19afkvl1rcfzph;(function(d, t) {
+        var s = d.createElement(t), options = {
+        'userName':'fucinadeltag',
+        'formHash':'r19afkvl1rcfzph',
+        'autoResize':true,
+        'height':'641',
+        'async':true,
+        'host':'wufoo.com',
+        'header':'hide',
+        'defaultValues':'field451=::field451Data::',
+        'ssl':false};
+        s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+        s.onload = s.onreadystatechange = function() {
+        var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+        try { r19afkvl1rcfzph = new WufooForm();r19afkvl1rcfzph.initialize(options);r19afkvl1rcfzph.display(); } catch (e) {}};
+        var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+        })(document, 'script');
+    </script>
+
+<% end %>
+
+<% if showForm == 'main' %>
 
 <div id="wufoo-q1wf0tmg16ukwpv">
     Fill out my <a href="https://fucinadeltag.wufoo.com/forms/q1wf0tmg16ukwpv">online form</a>.

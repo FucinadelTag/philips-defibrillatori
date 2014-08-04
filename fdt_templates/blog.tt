@@ -11,7 +11,7 @@ image: <%= @image %>
 testataForm:
     prima:  CALCOLA IL TUO PREVENTIVO
     seconda: Gratuito e senza impegno
-showForm: true
+showForm: main
 ---
 <p class="abstract"><%= @abstract %></p>
 
