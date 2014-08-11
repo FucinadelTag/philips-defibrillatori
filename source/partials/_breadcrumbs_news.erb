@@ -1,0 +1,8 @@
+<div class="row">
+        <ul class="breadcrumbs">
+            <li><%= link_to 'News', '/news' %></li>
+            <% if current_page.metadata[:page]['category'] %>
+                <li><%= link_to current_page.metadata[:page]['category'].gsub('_', ' '), category_path(current_page.metadata[:page]['category']) %></li>
+            <% end %>
+         </ul>
+</div>

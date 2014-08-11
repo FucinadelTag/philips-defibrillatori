@@ -7,6 +7,9 @@
 
 //= require app
 
+//= require ejs
+//= require fdtPrismicConfig
 //= require manageHeader
+//= require manageNews
 
 //= require_tree ./explorer_8_fix/.

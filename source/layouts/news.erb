@@ -1,0 +1,15 @@
+<% wrap_layout :layout do %>
+    <%= partial("breadcrumbs_news", :locals => { :current_page => current_page}) %>
+    <div class="row">
+        <!-- Main Blog Content -->
+        <div class="large-9 columns post" role="content">
+
+            <%= partial("header_post", :locals => { :article => current_page}) %>
+
+            <%= yield %>
+        </div>
+
+        <%= partial(:aside_news) %>
+    </div>
+
+<% end %>
