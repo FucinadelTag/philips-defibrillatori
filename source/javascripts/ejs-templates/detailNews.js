@@ -9,7 +9,7 @@
                 <div class="large-5 medium-5 columns">
                     <%= results[i].getImageView('news.image', 'hitlist').asHtml() %>
                 </div>
-                <div class="large-7 columns">
+                <div class="large-7 medium-7 columns">
                     <p>
                         <i>
                             <%= results[i].getDate('news.date') %><br />
