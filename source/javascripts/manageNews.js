@@ -58,6 +58,8 @@ function manageNews () {
             window.location.href = "/news";
         }
 
+        document.title = documents.results[0].getText('news.title');
+
         new EJS({url: '/javascripts/ejs-templates/detailNews.js'}).update('results', documents)
 
     }
