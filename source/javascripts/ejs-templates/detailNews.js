@@ -7,7 +7,7 @@
             </div>
             <div class="row">
                 <div class="large-5 columns">
-                    <%= link_to(results[i].getImageView('news.image', 'hitlist').asHtml(), 'news/view/?slug='+results[i].slug) %>
+                    <%= results[i].getImageView('news.image', 'hitlist').asHtml() %>
                 </div>
                 <div class="large-7 columns">
                     <p>
