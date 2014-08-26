@@ -34,6 +34,7 @@ function manageNews () {
     {
         url = $.url();
         param = url.param('slug');
+        console.log(param);
 
         if (param)
         {
