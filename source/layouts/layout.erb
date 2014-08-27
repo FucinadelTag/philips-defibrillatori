@@ -51,14 +51,16 @@
 
 
 <!-- Nav Bar -->
+<div class="row">
+<div class="large-12 medium-12 columns">
 <div class="contain-to-grid menu">
-    <nav class="top-bar" data-topbar>
+    <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
             <li class="name">
                 <!--http://lh6.googleusercontent.com/-34YbdpE2f6c/U0025W216cI/AAAAAAAAlzE/-OIpzXG15X4/w160-h60-no/logo.png -->
                 <a href="/"><img alt="Defibrillatori Philips" src="https://lh3.googleusercontent.com/-g4HJf2yMKsE/U02kMhfilgI/AAAAAAAAl0E/KJAx2bDXdTk/w150-h44-no/logo_piccolo.png"></a>
             </li>
-            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
         <section class="top-bar-section">
             <!-- Right Nav Section -->
@@ -76,10 +78,11 @@
                             <li><%= link_to 'Corsi di Abilitazione', '/abilitarsi-alluso' %></li>
                         </ul>
                 </li>
-                <!-- <li><%= link_to 'Prezzi', '/prezzi' %></li> -->
             </ul>
         </section>
     </nav>
+</div>
+</div>
 </div>
 
 <%= yield %>
