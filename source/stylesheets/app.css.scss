@@ -17,7 +17,9 @@ $wufoo-header-color: $ctaButton-header-color !default;
 $wufoo-header-margin-top: rem-calc(12) !default;
 $wufoo-header-padding-bottom: rem-calc(12) !default;
 
-
+.marginFooter {
+  margin: rem-calc(5px);
+}
 
 .blog-metadata{
     margin-bottom: rem-calc(10px);
