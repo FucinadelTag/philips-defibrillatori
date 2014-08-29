@@ -95,7 +95,9 @@
 
     <% end %>
 
-    <%= partial("banner_promo_large", :locals => { :bannerType => 'promo_sport'}) %>
+    <% if current_page.path.chomp != 'sport.html'  %>
+        <%= partial("banner_promo_large", :locals => { :bannerType => 'promo_sport'}) %>
+    <% end %>
 
     </div>
 </div>
