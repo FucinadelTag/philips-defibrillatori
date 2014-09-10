@@ -12,4 +12,7 @@
 //= require manageHeader
 //= require manageNews
 
+//= require fdtOsmekConfig
+//= require managePreventivi
+
 //= require_tree ./explorer_8_fix/.
