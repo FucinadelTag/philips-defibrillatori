@@ -50,49 +50,6 @@ function manageCampain () {
 
     }
 
-    var initPrismicApi = function ()
-    {
-        Prismic.Api(Configuration.apiEndpoint, doQuery);
-    }
-
-    var doQuery = function (err, Api)
-    {
-        Api.form('everything').ref(Api.master()).query('[[:d = fulltext(my.testate-pagine.target, "'+ paramOk +'")]]').submit(getData);
-
-    }
-
-    var getData = function (err, documents)
-    {
-        if (err) { console.log(err); return; }
-
-        if (documents.results.length > 0)
-        {
-            headerData[paramOk] = {
-                prima_linea: documents.results[0].getText('testate-pagine.prima-linea'),
-                seconda_linea: documents.results[0].getText('testate-pagine.seconda-linea'),
-                image_testata: documents.results[0].getImageView('testate-pagine.image', 'wide').url
-            };
-
-            changeHeader (headerData[paramOk]);
-
-
-
-        }
-        else
-        {
-            headerData[paramOk] = {};
-        }
-
-        $.cookie('headerData', headerData, { expires: 30 });
-
-    }
-
-    var changeHeader = function (data) {
-
-        $('#prima-linea').html(data['prima_linea']);
-        $('#seconda-linea').html(data['seconda_linea']);
-        $('#image-testata').attr("src", data['image_testata']);
-    }
 
     var updateWufoo = function (fieldID, string)
     {
