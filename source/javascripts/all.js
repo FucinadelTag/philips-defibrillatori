@@ -11,6 +11,7 @@
 //= require fdtPrismicConfig
 //= require manageHeader
 //= require manageNews
+//= require manageCampain
 
 //= require fdtOsmekConfig
 //= require managePreventivi
