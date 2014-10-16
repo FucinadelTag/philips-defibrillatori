@@ -37,16 +37,8 @@ function manageCampain () {
 
         });
 
+        $.cookie('campaign', campaignObject, { expires: 60 });
 
-        if (jQuery.isEmptyObject(campaignObject))
-        {
-            return;
-        }
-        else
-        {
-            $.cookie('campaign', campaignObject, { expires: 60 });
-            return;
-        }
 
     }
 
