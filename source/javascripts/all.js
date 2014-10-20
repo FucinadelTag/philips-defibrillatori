@@ -5,8 +5,6 @@
 //= require purl
 //= require prismic.io-1.0.12.min
 
-//= require app
-
 //= require ejs
 //= require fdtPrismicConfig
 //= require manageHeader
@@ -17,3 +15,5 @@
 //= require managePreventivi
 
 //= require_tree ./explorer_8_fix/.
+
+//= require app

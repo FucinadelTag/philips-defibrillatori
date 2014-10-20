@@ -261,6 +261,9 @@ footer {
 }
 
 .wufooNew {
+
+    margin-bottom: rem-calc(12px);
+
     @media #{$small} {
         @include grid-column(7);
     }

@@ -73,9 +73,12 @@ function manageCampain () {
 
     this.doManage = function ()
     {
+
         setParam ();
 
         manageData ();
+
+        return;
 
         //console.log ($.cookie('headerData'));
 
