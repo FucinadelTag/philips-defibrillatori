@@ -56,16 +56,16 @@ $wufoo-header-padding-bottom: rem-calc(12) !default;
 
 }
 
-.my-orbit-caption {
-    @extend .orbit-caption;
-    a {
-      color: #ffffff
-    }
-    @if $orbit-caption-position == "top" {
-        position: absolute;
-        top: 0;
-    }
-}
+// .my-orbit-caption {
+//     @extend .orbit-caption;
+//     a {
+//       color: #ffffff
+//     }
+//     @if $orbit-caption-position == "top" {
+//         position: absolute;
+//         top: 0;
+//     }
+// }
 
 .slide {
         padding-bottom: rem-calc(20px);
