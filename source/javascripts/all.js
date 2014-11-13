@@ -9,6 +9,7 @@
 //= require fdtPrismicConfig
 //= require manageHeader
 //= require manageNews
+//= require manageBlog
 //= require manageCampain
 
 //= require fdtOsmekConfig

@@ -41,7 +41,7 @@ $wufoo-header-padding-bottom: rem-calc(12) !default;
   padding-bottom: 10px;
 }
 
-.blog {
+.blog, .preview_blog {
     .abstract{
         font-style: italic;
         color: scale-color($body-font-color, $lightness: 35%);
