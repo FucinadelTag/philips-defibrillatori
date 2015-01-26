@@ -165,3 +165,8 @@ activate :prismic_middleman do |f|
   f.url = 'https://philips-defibrillatori.prismic.io/api'
   f.new_article_template = "fdt_templates/blog.tt"
 end
+
+activate :podio_middleman do |f|
+  f.podio_url = 'https://philips-defibrillatori.prismic.io/api'
+  f.podio_new_product_template = "fdt_templates/product.tt"
+end

@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/FucinadelTag/FdtGems
-  revision: e1aaf432b73a6af81b642af60cd4a1c66bcde72d
+  revision: 8d0d047f0ae23cbdd38056440f76e367bed16e74
   specs:
     prismic_middleman (0.0.1)
       middleman-core (>= 3.3.2)
@@ -8,6 +8,9 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
+    activemodel (4.1.1)
+      activesupport (= 4.1.1)
+      builder (~> 3.1)
     activesupport (4.1.1)
       i18n (~> 0.6, >= 0.6.9)
       json (~> 1.7, >= 1.7.7)
@@ -15,6 +18,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.6)
+    builder (3.2.2)
     chunky_png (1.3.1)
     coffee-script (2.2.0)
       coffee-script-source
@@ -33,6 +37,8 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.1.0)
+    faraday (0.8.9)
+      multipart-post (~> 1.2.0)
     fdt_middleman_tools (1.0.5)
       middleman-core (~> 3.0, >= 3.0.0)
     ffi (1.9.3)
@@ -93,12 +99,18 @@ GEM
       sprockets-sass (~> 1.1.0)
     minitest (5.3.4)
     multi_json (1.10.1)
+    multipart-post (1.2.0)
     padrino-helpers (0.12.2)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.12.2)
       tilt (~> 1.4.1)
     padrino-support (0.12.2)
       activesupport (>= 3.1)
+    podio (1.0.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      faraday (~> 0.8.0)
+      multi_json
     prismic.io (1.0.0.rc7)
     rack (1.5.2)
     rack-livereload (0.3.15)
@@ -141,6 +153,7 @@ DEPENDENCIES
   middleman-blog (~> 3.5.1)
   middleman-livereload (~> 3.1.0)
   middleman-minify-html
+  podio
   prismic.io
   prismic_middleman!
   wdm (~> 0.1.0)
