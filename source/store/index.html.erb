@@ -11,13 +11,21 @@ metadata:
 
 conversionCode: >
                     <!-- FOXYCART -->
-                    <script src="//cdn.foxycart.com/fucinadeltag/loader.js" async defer></script>
+                    <script src="//cdn.foxycart.com/defibrillatori-online/loader.js" async defer></script>
                     <!-- /FOXYCART -->
 
 
 ---
 
-<ul class="large-block-grid-2 medium-block-grid-2">
+<p data-fc-id="minicart">
+    <a href="https://defibrillatori-online.foxycart.com/cart?cart=view">
+        <span data-fc-id="minicart-quantity">0</span>
+        <span data-fc-id="minicart-singular"> item </span>
+        <span data-fc-id="minicart-plural"> items </span>
+        in cart. Total cost: $
+        <span data-fc-id="minicart-order-total">0</span>
+    </a>
+</p>
 
 <div class="row">
   <div class="large-12 columns">
@@ -35,22 +43,34 @@ conversionCode: >
                     <img src= <%= prodotto.data.immagine %> />
                 </div>
                 <div class="large-8 columns">
-                    <span class="prezzo" ><%= number_to_currency(prodotto.data.price, :unit => "&euro;", :separator => ",", :delimiter => ".") %></span>
-                    <br />
-                    <span class="less_important" >Codice Prodotto: <%= prodotto.data.codice %></span>
+                    <div class="row">
+                        <div class="large-6 columns">
+                            <span class="prezzo" ><%= number_to_currency(prodotto.data.price, :unit => "&euro;", :separator => ",", :delimiter => ".") %></span>
+                                <br />
+                            <span class="less_important" >Codice Prodotto: <%= prodotto.data.codice %></span>
+                        </div>
+
+                        <div class="large-6 columns">
 
                     <!-- form example -->
-                        <form action="https://fucinadeltag.foxycart.com/cart" method="post" accept-charset="utf-8">
+                        <form action="https://defibrillatori-online.foxycart.com/cart" method="post" accept-charset="utf-8">
                         <input type="hidden" name="name" value="<%= prodotto.data.title %>" />
                         <input type="hidden" name="price" value="<%= prodotto.data.price %>" />
                         <input type="hidden" name="code" value="<%= prodotto.data.codice %>" />
                         <input type="hidden" name="image" value="<%= prodotto.data.immagine %>" />
-                        <input type="submit" value="Add a Cool Example" class="submit" />
+                        <!-- <input type="hidden" name="category" value="<%= prodotto.data.categoria.downcase %>" /> -->
+                        <input type="submit" value="Acquista Subito" class="button round" />
                         </form>
 
-                    <hr />
+                        </div>
+                    </div>
 
-                    <%= prodotto.data.description %>
+                    <hr />
+                     <div class="row">
+                        <div class="large-12 columns">
+                            <%= prodotto.data.description %>
+                        </div>
+                    </div>
                 </div>
             </div>
 

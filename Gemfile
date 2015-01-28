@@ -13,7 +13,7 @@ gem "prismic_middleman", :git => 'git://github.com/FucinadelTag/FdtGems'
 
 # PODIO as content repository
 gem 'podio', :git => 'git://github.com/podio/podio-rb'
-gem "prismic_middleman", :git => 'git://github.com/FucinadelTag/FdtGems'
+gem "podio_middleman", :git => 'git://github.com/FucinadelTag/FdtGems'
 #gem "podio_middleman", :path => '../FdtGems/'
 
 gem "rest-client", :git => 'git://github.com/rest-client/rest-client'
