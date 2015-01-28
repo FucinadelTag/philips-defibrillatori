@@ -314,6 +314,17 @@ footer {
     padding: rem-calc(5);
 }
 
+.prezzo {
+    font-size: rem-calc(30);
+    color: lighten($rosso-color, 5%);
+    padding: rem-calc(5);
+}
+
+.less_important{
+    font-size: 80%;
+    font-style: italic;
+}
+
 .main-content {
   @include grid-row;
 

@@ -119,6 +119,7 @@ end
 page "/feed.xml", layout: false
 page "pagine/*", :layout => :page
 page "blog/*", :layout => :blog
+page "store/*", :layout => :store
 
 activate :relative_assets
 set :relative_links, false
@@ -161,12 +162,19 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
+helpers FdtMiddlemanTools
+
 activate :prismic_middleman do |f|
   f.url = 'https://philips-defibrillatori.prismic.io/api'
   f.new_article_template = "fdt_templates/blog.tt"
 end
 
 activate :podio_middleman do |f|
-  f.podio_url = 'https://philips-defibrillatori.prismic.io/api'
-  f.podio_new_product_template = "fdt_templates/product.tt"
+  f.podio_api_key = 'runscope'
+  f.podio_api_secret = 'D3FrXAJWyuyNY0A7uA2WYFRvnT9IcweKpTXsdgmRn1Rot5iOZ5XX17KarPUoqJTO'
+  f.podio_app_id = '9325823'
+  f.podio_app_token = '7cf9678005ab4dc7977677d289ec134a'
+  f.podio_views = {'consumabili'=>'22962502'}
+  f.podio_templates = {'consumabili'=>'prodotti'}
+  f.podio_fields_to_get = {'consumabili'=>['Nome Prodotto', 'Prezzo', 'Descrizione', 'Immagine', 'Stato', 'Per il modello', 'Categoria', 'Codice Prodotto Iredeem']}
 end

@@ -13,7 +13,10 @@
                 <div class="row over">
                     <div class="large-12 hide-for-small">
                         <%= current_page.data.testoTestata %>
-                        <%= partial "callToAction" %>
+
+                        <% if current_page.data.testataForm  %>
+                            <%= partial "callToAction" %>
+                        <% end %>
                             <!-- <div class="numero_verde">800 782 217</div> -->
 
                     </div>
@@ -27,7 +30,9 @@
                         <span>Chiama il Numero Verde gratuito!</span><br />
                         <span class="numero"> 800 782 217 </span><br />
                         <span class="orario">Lun-Ven dalle 8.30 alle 17.30</span>
-                        <%= partial "callToAction" %>
+                        <% if current_page.data.testataForm  %>
+                            <%= partial "callToAction" %>
+                        <% end %>
                     </div>
                 </div>
             </div>

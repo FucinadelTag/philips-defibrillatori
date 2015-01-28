@@ -1,0 +1,63 @@
+---
+layout: page_new
+title: Defibrillatori Philips
+immagineTestata: https://lh6.googleusercontent.com/-1z8w1vHopnI/U05i11LAc9I/AAAAAAAAl-M/jf6EKiTl_Tg/w960-h330-no/defibrillatore.jpg
+testoTestata:   <h1>
+                    Consumabili e Accessori<br />
+                    per Defibrillatori <span>Philips</span>
+                </h1>
+metadata:
+    description: Defibrillatori Philips sono incredibilmente semplici ed Intuitivi, Scegli il DAE Semiautomatico più adatto alla Tua Attività. Scrivici ora per Maggiori Informazioni!
+
+conversionCode: >
+                    <!-- FOXYCART -->
+                    <script src="//cdn.foxycart.com/fucinadeltag/loader.js" async defer></script>
+                    <!-- /FOXYCART -->
+
+
+---
+
+<ul class="large-block-grid-2 medium-block-grid-2">
+
+<div class="row">
+  <div class="large-12 columns">
+
+    <ul class="small-block-grid-1">
+        <% find_resource_by_path('^store/consumabili/*', 'price').each do |prodotto| %>
+        <li class="panel">
+            <div class="row">
+                <div class="large-12 columns">
+                    <h3 class="subheader"><%= prodotto.data.title %></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-4 columns">
+                    <img src= <%= prodotto.data.immagine %> />
+                </div>
+                <div class="large-8 columns">
+                    <span class="prezzo" ><%= number_to_currency(prodotto.data.price, :unit => "&euro;", :separator => ",", :delimiter => ".") %></span>
+                    <br />
+                    <span class="less_important" >Codice Prodotto: <%= prodotto.data.codice %></span>
+
+                    <!-- form example -->
+                        <form action="https://fucinadeltag.foxycart.com/cart" method="post" accept-charset="utf-8">
+                        <input type="hidden" name="name" value="<%= prodotto.data.title %>" />
+                        <input type="hidden" name="price" value="<%= prodotto.data.price %>" />
+                        <input type="hidden" name="code" value="<%= prodotto.data.codice %>" />
+                        <input type="hidden" name="image" value="<%= prodotto.data.immagine %>" />
+                        <input type="submit" value="Add a Cool Example" class="submit" />
+                        </form>
+
+                    <hr />
+
+                    <%= prodotto.data.description %>
+                </div>
+            </div>
+
+
+        </li>
+
+        <% end %>
+    </ul>
+  </div>
+</div>

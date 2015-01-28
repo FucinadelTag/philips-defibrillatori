@@ -1,0 +1,32 @@
+---
+# Warning: This file is auto-generated from middelman fetting data from Podio CRM. Local changes will overriden on next sync.
+
+title: >
+        <%= @item['title']['value'] %>
+
+price: <%= @item['price']['value'] %>
+immagine: <%= @item['immagine']['value'] %>
+categoria: <%= @item['categoria']['value'][0] %>
+codice: <%= @item['codice-prodotto-iredeem']['value'] %>
+
+description: >
+        <%= @item['description']['value'] %>
+
+---
+
+<div class="row">
+    <div class="large-12 columns">
+
+        <h3 class="subheader">
+            <%= @item['title']['value'] %>
+        </h3>
+        <div class="row">
+            <div class="large-3 columns">
+                <img src="<%= @item['immagine']['value'] %>" class="padding" alt="<%= @title %>" />
+            </div>
+
+            <div class="large-9 columns small">
+                <%= @item['description']['value'] %>
+            </div>
+        </div>
+</div>

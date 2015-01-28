@@ -12,8 +12,11 @@ gem "prismic_middleman", :git => 'git://github.com/FucinadelTag/FdtGems'
 #gem "prismic_middleman", :path => '../FdtGems/'
 
 # PODIO as content repository
-gem 'podio', require: "podio"
+gem 'podio', :git => 'git://github.com/podio/podio-rb'
+gem "prismic_middleman", :git => 'git://github.com/FucinadelTag/FdtGems'
 #gem "podio_middleman", :path => '../FdtGems/'
+
+gem "rest-client", :git => 'git://github.com/rest-client/rest-client'
 
 # FdtTools
 gem "fdt_middleman_tools", ">= 1.0.0"

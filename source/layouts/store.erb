@@ -1,0 +1,36 @@
+<% wrap_layout :layout do%>
+
+    <div class="row slide">
+        <div class="large-12 medium-12 columns">
+            <% blog.articles[0...1].each do |article| %>
+                <div class="row">
+                    <div class="large-12 hide-for-small">
+                        <div id="featured">
+                            <% link_to article do %>
+                                <%= tag :img, :src => article.metadata[:page]["image"], :title => article.title %>
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+                <div class="row over">
+                    <div class="large-12 hide-for-small">
+                        <%= partial(:header_post, :locals => { :article => article}) %>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="large-9 medium-8 columns post border" role="content">
+
+            <%= yield %>
+
+        </div>
+
+        <%= partial(:aside) %>
+
+    </div>
+
+<% end %>
