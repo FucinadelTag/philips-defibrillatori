@@ -17,67 +17,119 @@ conversionCode: >
 
 ---
 
-<p data-fc-id="minicart"> <i class="fa fa-shopping-cart"></i>
-    <a href="https://defibrillatori-online.foxycart.com/cart?cart=view">
-        <span data-fc-id="minicart-quantity">0</span>
-        <span data-fc-id="minicart-singular"> prodtto </span>
-        <span data-fc-id="minicart-plural"> prodotti </span>
-        nel carrello. Importo: &euro;
-        <span data-fc-id="minicart-order-total">0</span>
-    </a>
-</p>
+<%
+    data = find_resource_by_path('^store/consumabili/*', 'price')
+
+    hash = Hash.new
+
+    data.each { |prodotto|
+
+        hashprodotto = Hash.new
+
+
+
+        hashprodotto[prodotto.data.codice]  = prodotto
+
+         prodotto.data.per_il_modello.each { |modello|
+
+            if hash.has_key?(modello)
+                hash[modello].merge! (hashprodotto)
+            else
+                hash[modello] = hashprodotto
+            end
+
+
+         }
+         hash.to_a.reverse
+    }
+
+%>
 
 <div class="row">
-  <div class="large-12 columns">
+    <div class="row">
+        <div class="large-7 columns">
 
-    <ul class="small-block-grid-1">
-        <% find_resource_by_path('^store/consumabili/*', 'price').each do |prodotto| %>
-        <li class="panel">
-            <div class="row">
-                <div class="large-12 columns">
-                    <h3 class="subheader"><%= prodotto.data.title %></h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="large-4 columns">
-                    <img src="<%= prodotto.data.immagine %>" class="padding" alt="<%= prodotto.data.title %>" />
-                </div>
-                <div class="large-8 columns">
-                    <div class="row">
-                        <div class="large-6 columns">
-                            <span class="prezzo" ><%= number_to_currency(prodotto.data.price, :unit => "&euro;", :separator => ",", :delimiter => ".") %></span>
-                                <br />
-                            <span class="less_important" >Codice Prodotto: <%= prodotto.data.codice %></span>
-                        </div>
-
-                        <div class="large-6 columns">
-
-                    <!-- form example -->
-                        <form action="https://defibrillatori-online.foxycart.com/cart" method="post" accept-charset="utf-8">
-                        <input type="hidden" name="name" value="<%= prodotto.data.title %>" />
-                        <input type="hidden" name="price" value="<%= prodotto.data.price %>" />
-                        <input type="hidden" name="code" value="<%= prodotto.data.codice %>" />
-                        <input type="hidden" name="image" value="<%= prodotto.data.immagine %>" />
-                        <!-- <input type="hidden" name="category" value="<%= prodotto.data.categoria.downcase %>" /> -->
-                        <input type="submit" value="Acquista Subito" class="button round" />
-                        </form>
-
-                        </div>
-                    </div>
-
-                    <hr />
-                     <div class="row">
-                        <div class="large-12 columns">
-                            <%= prodotto.data.description %>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <dl id="menu" class="sub-nav">
+                <dt>Modelli:</dt>
+                <% hash.to_a.reverse.each do |key, gruppo| %>
+                    <dd><a href="#<%= key %>"><%= key %></a></dd>
+                <% end %>
+            </dl>
+        </div>
+        <div class="large-5 columns">
+            <p data-fc-id="minicart"> <i class="fa fa-shopping-cart"></i>
+                <a href="https://defibrillatori-online.foxycart.com/cart?cart=view">
+                    <span data-fc-id="minicart-quantity">0</span>
+                    <span data-fc-id="minicart-singular"> prodtto </span>
+                    <span data-fc-id="minicart-plural"> prodotti </span>
+                    nel carrello. Importo: &euro;
+                    <span data-fc-id="minicart-order-total">0</span>
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <% hash.to_a.reverse.each do |key, gruppo| %>
+                <hr>
+                <h2 id="<%= key %>">Consumabili modello: <%= key %> <a href="#menu"><i class="fa fa-arrow-up"></i> </a></h2>
+                <hr>
+                    <ul class="small-block-grid-1 panel">
 
 
-        </li>
+                        <% gruppo.each do |codice, prodotto| %>
+                        <li>
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <h3 class="subheader"><%= prodotto.data.title %></h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-4 columns">
+                                    <img src="<%= prodotto.data.immagine %>" class="padding" alt="<%= prodotto.data.title %>" />
+                                </div>
+                                <div class="large-8 columns">
+                                    <div class="row">
+                                        <div class="large-6 columns">
+                                            <span class="prezzo" ><%= number_to_currency(prodotto.data.price, :unit => "&euro;", :separator => ",", :delimiter => ".") %></span>
+                                                <br />
+                                            <span class="less_important" >Codice Prodotto: <%= prodotto.data.codice %></span>
+                                        </div>
 
-        <% end %>
-    </ul>
-  </div>
+                                        <div class="large-6 columns">
+
+                                    <!-- form example -->
+                                        <form action="https://defibrillatori-online.foxycart.com/cart" method="post" accept-charset="utf-8">
+                                        <input type="hidden" name="name" value="<%= prodotto.data.title %>" />
+                                        <input type="hidden" name="price" value="<%= prodotto.data.price %>" />
+                                        <input type="hidden" name="code" value="<%= prodotto.data.codice %>" />
+                                        <input type="hidden" name="image" value="<%= prodotto.data.immagine %>" />
+                                        <!-- <input type="hidden" name="category" value="<%= prodotto.data.categoria.downcase %>" /> -->
+                                        <input type="submit" value="Acquista Subito" class="button round" />
+                                        </form>
+
+                                        </div>
+                                    </div>
+
+                                    <hr />
+                                     <div class="row">
+                                        <div class="large-12 columns">
+                                            <%= prodotto.data.description %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <hr>
+
+                        <% end %>
+                    </ul>
+            <% end %>
+        </div>
+    </div>
+
+
+
 </div>

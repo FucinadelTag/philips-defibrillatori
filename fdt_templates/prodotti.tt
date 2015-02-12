@@ -8,6 +8,7 @@ price: <%= @item['price']['value'] %>
 immagine: <%= @item['immagine']['value'] %>
 categoria: <%= @item['categoria']['value'][0] %>
 codice: <%= @item['codice-prodotto-iredeem']['value'] %>
+per_il_modello: <%= @item['per-il-modello']['value'] %>
 
 description: >
         <%= @item['description']['value'] %>
