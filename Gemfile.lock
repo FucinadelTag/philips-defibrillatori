@@ -2,6 +2,8 @@ GIT
   remote: git://github.com/FucinadelTag/FdtGems
   revision: 04e822eb5171274d2561e1da18870a06e6dbefef
   specs:
+    podio_middleman (0.0.1)
+      middleman-core (>= 3.3.2)
     prismic_middleman (0.0.1)
       middleman-core (>= 3.3.2)
 
@@ -22,12 +24,6 @@ GIT
     rest-client (2.0.0.alpha)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-
-PATH
-  remote: ../FdtGems/
-  specs:
-    podio_middleman (0.0.1)
-      middleman-core (>= 3.3.2)
 
 GEM
   remote: http://rubygems.org/
