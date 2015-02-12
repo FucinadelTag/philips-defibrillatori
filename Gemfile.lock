@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/FucinadelTag/FdtGems
+  revision: 04e822eb5171274d2561e1da18870a06e6dbefef
+  specs:
+    prismic_middleman (0.0.1)
+      middleman-core (>= 3.3.2)
+
+GIT
   remote: git://github.com/podio/podio-rb
   revision: 18ccdf72699747b108e7397b62025be9ac7d4aed
   specs:
@@ -20,8 +27,6 @@ PATH
   remote: ../FdtGems/
   specs:
     podio_middleman (0.0.1)
-      middleman-core (>= 3.3.2)
-    prismic_middleman (0.0.1)
       middleman-core (>= 3.3.2)
 
 GEM
