@@ -958,15 +958,15 @@ $body-font-family: 'Open Sans', sans-serif;
 // $include-html-nav-classes: $include-html-classes;
 
 // We use these to control margin and padding
-// $sub-nav-list-margin: rem-calc(-4 0 18);
+$sub-nav-list-margin: rem-calc(-4 0 18);
 // $sub-nav-list-padding-top: rem-calc(4);
 
 // We use this to control the definition
 // $sub-nav-font-family: $body-font-family;
 $sub-nav-font-size: rem-calc(16);
 $sub-nav-font-color: #0e5fd8;
-$sub-nav-font-weight: bold;
-// $sub-nav-text-decoration: none;
+$sub-nav-font-weight: none;
+$sub-nav-text-decoration: underline;
 // $sub-nav-border-radius: 3px;
 // $sub-nav-font-color-hover: scale-color($sub-nav-font-color, $lightness: -25%);
 
