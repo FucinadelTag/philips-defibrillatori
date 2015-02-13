@@ -965,7 +965,7 @@ $sub-nav-list-margin: rem-calc(-4 0 18);
 // $sub-nav-font-family: $body-font-family;
 $sub-nav-font-size: rem-calc(16);
 $sub-nav-font-color: #0e5fd8;
-$sub-nav-font-weight: none;
+$sub-nav-font-weight: "";
 $sub-nav-text-decoration: underline;
 // $sub-nav-border-radius: 3px;
 // $sub-nav-font-color-hover: scale-color($sub-nav-font-color, $lightness: -25%);
@@ -980,7 +980,7 @@ $sub-nav-text-decoration: underline;
 // $sub-nav-active-padding: rem-calc(3 16);
 // $sub-nav-active-cursor: default;
 
-// $sub-nav-item-divider: "";
+$sub-nav-item-divider: "";
 // $sub-nav-item-divider-margin: rem-calc(12);
 
 //
