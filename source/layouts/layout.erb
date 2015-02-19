@@ -45,7 +45,7 @@
 
         <% end %>
 
-        <% if current_page.path.chomp != 'sport.html'  %>
+        <% if current_page.path.chomp != 'sport.html'  and  current_page.path.chomp != 'store/defibrillatori.html' %>
             <%= partial("banner_promo_large", :locals => { :bannerType => 'promo_sport'}) %>
         <% end %>
 

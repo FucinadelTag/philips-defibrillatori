@@ -1,45 +1,48 @@
 <% wrap_layout :layout do %>
 
-    <div class="row">
-        <div class="large-12 medium-12 columns">
-            <div class="row">
-                <div class="large-12 hide-for-small">
-                    <div id="featured">
-                        <%= tag :img, :src => current_page.data.immagineTestata, :title => current_page.data.title, :id => 'image-testata' %>
-                    </div>
-                </div>
-            </div>
-            <% if current_page.data.testoTestata  %>
-                <div class="row over">
+    <% if current_page.data.immagineTestata  %>
+        <div class="row">
+            <div class="large-12 medium-12 columns">
+                <div class="row">
                     <div class="large-12 hide-for-small">
-                        <%= current_page.data.testoTestata %>
-
-                        <% if current_page.data.testataForm  %>
-                            <%= partial "callToAction" %>
-                        <% end %>
-                            <!-- <div class="numero_verde">800 782 217</div> -->
-
+                        <div id="featured">
+                            <%= tag :img, :src => current_page.data.immagineTestata, :title => current_page.data.title, :id => 'image-testata' %>
+                        </div>
                     </div>
                 </div>
-            <% end %>
+                <% if current_page.data.testoTestata  %>
+                    <div class="row over">
+                        <div class="large-12 hide-for-small">
+                            <%= current_page.data.testoTestata %>
 
-            <div class="row">
-                <div class="large-12 columns show-for-small">
-                    <div class="box_nverde">
-                        <h1>Defibrillatore Philips</h1>
-                        <span>Chiama il Numero Verde gratuito!</span><br />
-                        <span class="numero"> 800 782 217 </span><br />
-                        <span class="orario">Lun-Ven dalle 8.30 alle 17.30</span>
-                        <% if current_page.data.testataForm  %>
-                            <%= partial "callToAction" %>
-                        <% end %>
+                            <% if current_page.data.testataForm  %>
+                                <%= partial "callToAction" %>
+                            <% end %>
+                                <!-- <div class="numero_verde">800 782 217</div> -->
+
+                        </div>
+                    </div>
+                <% end %>
+
+                <div class="row">
+                    <div class="large-12 columns show-for-small">
+                        <div class="box_nverde">
+                            <h1>Defibrillatore Philips</h1>
+                            <span>Chiama il Numero Verde gratuito!</span><br />
+                            <span class="numero"> 800 782 217 </span><br />
+                            <span class="orario">Lun-Ven dalle 8.30 alle 17.30</span>
+                            <% if current_page.data.testataForm  %>
+                                <%= partial "callToAction" %>
+                            <% end %>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <br/>
+        <br/>
+    <% end %>
+
 
 
     <div class="row">

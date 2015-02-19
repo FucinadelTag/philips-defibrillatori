@@ -91,8 +91,9 @@ conversionCode: >
                                 <div class="large-8 columns">
                                     <div class="row">
                                         <div class="large-6 columns">
-                                            <span class="prezzo" ><%= number_to_currency(prodotto.data.price, :unit => "&euro;", :separator => ",", :delimiter => ".") %></span>
-                                                <br />
+                                            <span class="prezzo" ><%= number_to_currency(prodotto.data.price, :unit => "&euro;", :separator => ",", :delimiter => ".") %> + IVA</span>
+                                            <br /><i class="less_important"> (<%= number_to_currency(prodotto.data.prezzo_con_iva, :unit => "&euro;", :separator => ",", :delimiter => ".") %> IVA inclusa)</i>
+                                            <br />
                                             <span class="less_important" >Codice Prodotto: <%= prodotto.data.codice %></span>
                                         </div>
 
@@ -101,11 +102,11 @@ conversionCode: >
                                     <!-- form example -->
                                         <form action="https://defibrillatori-online.foxycart.com/cart" method="post" accept-charset="utf-8">
                                         <input type="hidden" name="name" value="<%= prodotto.data.title %>" />
-                                        <input type="hidden" name="price" value="<%= prodotto.data.price %>" />
+                                        <input type="hidden" name="price" value="<%= prodotto.data.prezzo_con_iva %>" />
                                         <input type="hidden" name="code" value="<%= prodotto.data.codice %>" />
                                         <input type="hidden" name="image" value="<%= prodotto.data.immagine %>" />
                                         <!-- <input type="hidden" name="category" value="<%= prodotto.data.categoria.downcase %>" /> -->
-                                        <input type="submit" value="Acquista Subito" class="button round" />
+                                        <input type="submit" value="Acquista Subito" class="button" />
                                         </form>
 
                                         </div>

@@ -5,6 +5,7 @@ title: >
         <%= @item['title']['value'] %>
 
 price: <%= @item['price']['value'] %>
+prezzo_con_iva: <%= @item['prezzo-con-iva']['value'] %>
 immagine: <%= @item['immagine']['value'] %>
 categoria: <%= @item['categoria']['value'][0] %>
 codice: <%= @item['codice-prodotto-iredeem']['value'] %>

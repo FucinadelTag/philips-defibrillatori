@@ -176,5 +176,5 @@ activate :podio_middleman do |f|
   f.podio_app_token = '7cf9678005ab4dc7977677d289ec134a'
   f.podio_views = {'consumabili'=>'22962502'}
   f.podio_templates = {'consumabili'=>'prodotti'}
-  f.podio_fields_to_get = {'consumabili'=>['Nome Prodotto', 'Prezzo', 'Descrizione', 'Immagine', 'Stato', 'Per il modello', 'Categoria', 'Codice Prodotto Iredeem']}
+  f.podio_fields_to_get = {'consumabili'=>['Nome Prodotto', 'Prezzo', 'Descrizione', 'Immagine', 'Stato', 'Per il modello', 'Categoria', 'Codice Prodotto Iredeem', 'Prezzo con IVA']}
 end
