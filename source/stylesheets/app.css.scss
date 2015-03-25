@@ -243,6 +243,12 @@ footer {
     }
 }
 
+h2 {
+  span {
+    font-weight: bold;
+  }
+}
+
 
 .wufoo {
     @media #{$small} {
