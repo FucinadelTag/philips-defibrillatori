@@ -221,20 +221,8 @@ footer {
   font-style: italic;
 }
 
-
-.wufoo {
-    @media #{$small} {
-        @include grid-column($wufoo-columns);
-    }
-
-    @if $wufoo-has-border == yes {
-      border-style: solid;
-      border-width: 1px;
-      border-color: $wufoo-border-color;
-      box-shadow: 3px 3px 6px $wufoo-border-color;
-    }
-
-    .header {
+#formContatti {
+  .header {
       margin-top: $wufoo-header-margin-top;
       background-color: $wufoo-header-color;
       text-align: center;
@@ -253,6 +241,22 @@ footer {
       }
 
     }
+}
+
+
+.wufoo {
+    @media #{$small} {
+        @include grid-column($wufoo-columns);
+    }
+
+    @if $wufoo-has-border == yes {
+      border-style: solid;
+      border-width: 1px;
+      border-color: $wufoo-border-color;
+      box-shadow: 3px 3px 6px $wufoo-border-color;
+    }
+
+
   }
 
 .ctaButton {
