@@ -215,6 +215,7 @@ footer {
   font-size: 130%;
   text-align: center;
   margin-bottom: rem-calc(12px);
+  color: scale-color($body-font-color, $lightness: 35%);
 }
 
 .italic {
@@ -360,4 +361,36 @@ h2 {
     line-height: 1;
   }
 
+}
+
+.prezzo_promozione {
+  font-size: rem-calc(40);
+  font-weight: bold;
+  color: $rosso-color;
+}
+
+.prezzo_originale {
+  font-size: rem-calc(18);
+  font-style: italic;
+  color: scale-color($body-font-color, $lightness: 35%);
+}
+
+.precentuale_sconto {
+  font-size: rem-calc(20);
+  color: scale-color($body-font-color, $lightness: 35%);
+  font-weight: bold;
+}
+
+.title_promozione {
+  background-color: scale-color($panel-bg, $lightness: 5%);
+}
+
+.formButton {
+  @include button($bg: $ctaButton-header-color, $radius: $ctaButton-radius, $full-width: false);
+}
+
+.subtext {
+    font-style: italic;
+    font-size: rem-calc(18);
+    color: scale-color($body-font-color, $lightness: 35%);
 }

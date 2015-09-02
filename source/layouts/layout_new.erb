@@ -59,45 +59,9 @@
 
 <%= yield %>
 
-<footer class="row">
-    <div class="large-12 medium-12 columns"><hr>
-        <div class="row">
-            <div class="large-2 medium-4 columns">
-                <img alt="Defibrillatori Philips" src="http://lh3.googleusercontent.com/-UfeQEuo1mqo/U0JAw1w1hPI/AAAAAAAAjLE/nxTVvN283RE/w109-h21-no/mainlogo.gif">
-                    <p style="padding-left:15px">
-                        <a href="//www.iubenda.com/privacy-policy/342605" class="iubenda-white no-brand iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-                    </p>
-            </div>
+<%= partial "footer" %>
 
-            <div class="large-4 medium-4 columns">
-                <h6 class="subheader">PERCHÈ DOTARSI DI DEFIBRILLATORE</h6>
-                <ul>
-                    <li><strong>Puoi salvare una vita</strong></li>
-                    <li>Dai al tuo ambiente un'immagine sicura e positiva</li>
-                    <li>Riduci il rischio di responsabilità civile</li>
-                </ul>
-            </div>
 
-            <div class="large-4 medium-4 columns">
-                <h6 class="subheader">OBBLIGATORIO PER LEGGE</h6>
-                <p>
-                    A partire dal 27 Aprile 2013 è OBBLIGATORIO per tutte le società sportive dotarsi di defibrillatori<br />
-                    <%= link_to 'Cosa dice la legge', '/cosa-dice-la-legge' %>
-                </p>
-
-            </div>
-
-            <div class="large-2 medium-4 columns end">
-                <i>Distributore Ufficiale</i><br />
-                <img alt="Defibrillatori Philips" src="https://lh3.googleusercontent.com/-g4HJf2yMKsE/U02kMhfilgI/AAAAAAAAl0E/KJAx2bDXdTk/w150-h44-no/logo_piccolo.png">
-                <br />
-                <i>P.IVA: 10574970017</i>
-
-            </div>
-
-        </div>
-    </div>
-  </footer>
 
 <%= javascript_include_tag  "all" %>
 

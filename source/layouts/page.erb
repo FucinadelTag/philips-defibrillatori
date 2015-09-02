@@ -3,7 +3,7 @@
     <div class="row">
         <div class="large-12 medium-12 columns">
             <div class="row">
-                <div class="large-12 columns hide-for-small">
+                <div class="large-12 hide-for-small">
                     <div id="featured">
                         <%= tag :img, :src => current_page.data.immagineTestata, :title => current_page.data.title %>
                     </div>
@@ -14,7 +14,16 @@
                     <div class="large-12 hide-for-small">
                         <%= current_page.data.testoTestata %>
 
-                            <div class="numero_verde">800 782 217</div>
+                            <div class="row">
+                                <div class="small-12 columns">
+                                        <form action="https://defibrillatori-online.foxycart.com/cart" method="post" accept-charset="utf-8">
+                                            <input type="hidden" name="name" value="Defibrillatore Heartstart HS1" />
+                                            <input type="hidden" name="price" value="890" />
+                                            <input type="hidden" name="code" value="M23232" />
+                                            <input type="submit" value="Acquista Subito" class="button" />
+                                        </form>
+                                </div>
+                            </div>
 
                     </div>
                 </div>
@@ -32,7 +41,7 @@
 
 
     <div class="row">
-        <div class="large-8 medium-8 columns">
+        <div class="large-12 medium-12">
             <%= yield %>
         </div>
     </div>
