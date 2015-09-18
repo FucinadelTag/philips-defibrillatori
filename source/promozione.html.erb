@@ -21,6 +21,15 @@ conversionCode: >
                       id="snipcart"
                       src="https://cdn.snipcart.com/scripts/snipcart.js"
                       data-api-key="N2EzMWYxMWUtN2Q1Zi00OTQ5LTljZGEtZjliOTU5MzRmM2M3"></script>
+
+                    <script type="text/javascript">
+                        Snipcart.execute('bind', 'app.ready', function() {
+                            Snipcart.execute('registerLocale', 'it', {
+                                                            "name": "Nome e Cognome"
+                                            });
+                        });
+                    </script>
+
 ---
 
 <!-- Nav Bar -->
