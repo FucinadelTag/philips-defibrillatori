@@ -29,6 +29,26 @@ conversionCode: >
                                             });
                         });
                     </script>
+                    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
+                    <script type="text/javascript">
+                           $('.slider-for').slick({
+                              slidesToShow: 1,
+                              slidesToScroll: 1,
+                              arrows: false,
+                              fade: true,
+                              asNavFor: '.slider-nav'
+                            });
+                            $('.slider-nav').slick({
+                              slidesToShow: 3,
+                              slidesToScroll: 1,
+                              asNavFor: '.slider-for',
+                              dots: false,
+                              arrows: false,
+                              centerMode: false,
+                              focusOnSelect: true
+                            });
+                    </script>
+
 
 ---
 
@@ -47,17 +67,46 @@ conversionCode: >
 
 <div class="row">
     <div class="large-12 hide-for-small">
-        <h1>
-            Defibrillatore Philips Modello Heartstart HS1
+        <h1 class="subheader">
+            <i>Defibrillatore Philips Modello Heartstart HS1</i>
         </h1>
     </div>
 
 </div>
 
+
+
 <div class="row">
 
     <div class="large-5 medium-5 columns">
-        <%= tag :img, :src => "http://lh3.googleusercontent.com/m8522kyCjsLuB7qsgId5sFrguYmMexCeBJNcQBQ-BinD=w500-h400-no", :title => "Defibrillatore Philips Heartstart HS1" %>
+        <div class="slider slider-for">
+            <div>
+                <%= tag :img, :src => "https://lh3.googleusercontent.com/m-NW6IGEzWKCNr29jVAx_y5KWcdzEMVvCRZVMsLlVYWX9th7KTC01RKgxT9rMnbLSeczF-ERpUoVM4PXXJJRdBFsTQ2P6GGY_Ar1H3_g52mc_M_f9CnDsMphfBzt6QdhDeVIgex-iMGk2RA72dldtJCJtf9G5qHnEwAuRTi_0-LIZ2o5f-PTgCrfGppswOI5mPQJcvFO5QLSJOy4mYvPTP6N1xem-ZvpdYOHoOHEnUid3q7Jb_XXh1jBWzq_HlD0_TwH2rw7USpnpGZHYb8o3UqoOOInuc0QYz9oY2CdvqRL_gv0lsSZiMvEwGIpRP55oMk0WO0kHsRGLhLfr9wBCz38-H38mY9TgqW-ac3FGqo-PUAcfuIJqDcpmpV5MdCte4Sk5a43cpjfXl4dYDye3o6uCeMc4JcoXHJZD_vncptB7iLGlbmcsefM_U7PxEzL2nhDkLEQRS1m0-vr0mxARedODLD9Z8JVysFkESdg7pGu8Du18Kyn6sCdw8sKB3DdqsKQoJVg0GIO2u4Qtp_UImy8h_GuanxoxqBm-jMxUCSz=w500-no", :title => "Defibrillatore Philips Heartstart HS1" %>
+            </div>
+            <div>
+                <%= tag :img, :src => "http://lh3.googleusercontent.com/m8522kyCjsLuB7qsgId5sFrguYmMexCeBJNcQBQ-BinD=w500-h400-no", :title => "Defibrillatore Philips Heartstart HS1" %>
+            </div>
+            <div>
+                <%= tag :img, :src => "https://lh3.googleusercontent.com/pIxPflXZDY0oM2oyteXh928EoVsnlwyeJPDMlahqG-riHSGyXBNI38Kah7a0ES0BbVElMV9Vw_mK0vfp-fDewWGISWtEOnhQ0Cpn6YDQ8eJjyaN_zuk7aNH3pelwwRI5utUtFe2VNybmZ4AvF9kM4iREovVMyeJihZX3R2fchzCE_7Bv4cAI1bkC-OpMghZOhC1VgOieG58MNI_c8MexfCRpay7jiXD4O2Ewj7cpJvU5abRPo-WFpFz0JIUNPm3qrOxKxLG2wwSyuJuqTMkHNZ9wLZw_YrWniBufYenrFIzipEowIWEqTBNl9T4MEjj3PjjlCxy7g19mh_DbxwN2yPCGLquZhX8cl3gnpdeAWVXnBGkuOPggS5eJ1FhAqcDkGpJzWPHfvurvk3E87ybEZrOq8eZ5Lky2lQivpO_mqiMlwpGb643fPYQwf9gWZGbBmF8k255bD8jhKM9e7cTV0JVVoEYBKWQ6D0I5sWMkPscqq6l_bOVK7KNEKRx5DkiROFwL6roF9IsmjK2NIcQg1Z27FgIyU6-aSltNTITDc9LI=w500-no", :title => "Defibrillatore Philips Heartstart HS1" %>
+            </div>
+            <div>
+                <%= tag :img, :src => "https://lh3.googleusercontent.com/Yteu8dryhlk-paiuu92-VtQfjAqdlsnxXitTKKAmQmkHJWxLCIyMzZwLecHo6a1Lhb6UDFF1lSAduhwTggqEtoKGPe3xq71e619qlg6GxTjBL0CKlkWw_ZtxnlyD_fvtCOxx8n-59r50bJ4rHGIcW18tpvtnjsB0stwEbpC3ySOa-L03wRZgQXANIyamRbGWNVtWKwJtTmOhLsFiNwsYdOvI2OQgpRF8hRLAUFzBX-QJFIpwzvLEeBwYSk4l7ujvH2iBG4iB_6sBpogx4hmPfU7cvjDGaWSd0Fn2LSveOwT4cODgxhik3ts_RwHk1ARVoyd0GJ5WcFEwguy-cDhqj1zJOpBWN7_TZF3pDDHy551ssn695TCW9mvR5Dr9LpHMNzsVpt3fulMjHIirHt4rhpwHdyIxdg0PdjLIO7MSfC5bKZ-z-bYpPV-jFn8nwy-NsC_W5GNRVW15KD1c4hcKwTZ5No33Fwsh1pW9RJjGfr34HLhyg9myEkvK3vKYDmoIW5Cn6gqw58mgNBNBd2T9w5mu3ID9FLtphyWEDin7KqBF=w500-no", :title => "Defibrillatore Philips Heartstart HS1" %>
+            </div>
+        </div>
+        <div class="slider slider-nav">
+            <div>
+                <%= tag :img, :src => "https://lh3.googleusercontent.com/m-NW6IGEzWKCNr29jVAx_y5KWcdzEMVvCRZVMsLlVYWX9th7KTC01RKgxT9rMnbLSeczF-ERpUoVM4PXXJJRdBFsTQ2P6GGY_Ar1H3_g52mc_M_f9CnDsMphfBzt6QdhDeVIgex-iMGk2RA72dldtJCJtf9G5qHnEwAuRTi_0-LIZ2o5f-PTgCrfGppswOI5mPQJcvFO5QLSJOy4mYvPTP6N1xem-ZvpdYOHoOHEnUid3q7Jb_XXh1jBWzq_HlD0_TwH2rw7USpnpGZHYb8o3UqoOOInuc0QYz9oY2CdvqRL_gv0lsSZiMvEwGIpRP55oMk0WO0kHsRGLhLfr9wBCz38-H38mY9TgqW-ac3FGqo-PUAcfuIJqDcpmpV5MdCte4Sk5a43cpjfXl4dYDye3o6uCeMc4JcoXHJZD_vncptB7iLGlbmcsefM_U7PxEzL2nhDkLEQRS1m0-vr0mxARedODLD9Z8JVysFkESdg7pGu8Du18Kyn6sCdw8sKB3DdqsKQoJVg0GIO2u4Qtp_UImy8h_GuanxoxqBm-jMxUCSz=w500-no", :title => "Defibrillatore Philips Heartstart HS1" %>
+            </div>
+            <div>
+                <%= tag :img, :src => "http://lh3.googleusercontent.com/m8522kyCjsLuB7qsgId5sFrguYmMexCeBJNcQBQ-BinD=w500-h400-no", :title => "Defibrillatore Philips Heartstart HS1" %>
+            </div>
+            <div>
+                <%= tag :img, :src => "https://lh3.googleusercontent.com/pIxPflXZDY0oM2oyteXh928EoVsnlwyeJPDMlahqG-riHSGyXBNI38Kah7a0ES0BbVElMV9Vw_mK0vfp-fDewWGISWtEOnhQ0Cpn6YDQ8eJjyaN_zuk7aNH3pelwwRI5utUtFe2VNybmZ4AvF9kM4iREovVMyeJihZX3R2fchzCE_7Bv4cAI1bkC-OpMghZOhC1VgOieG58MNI_c8MexfCRpay7jiXD4O2Ewj7cpJvU5abRPo-WFpFz0JIUNPm3qrOxKxLG2wwSyuJuqTMkHNZ9wLZw_YrWniBufYenrFIzipEowIWEqTBNl9T4MEjj3PjjlCxy7g19mh_DbxwN2yPCGLquZhX8cl3gnpdeAWVXnBGkuOPggS5eJ1FhAqcDkGpJzWPHfvurvk3E87ybEZrOq8eZ5Lky2lQivpO_mqiMlwpGb643fPYQwf9gWZGbBmF8k255bD8jhKM9e7cTV0JVVoEYBKWQ6D0I5sWMkPscqq6l_bOVK7KNEKRx5DkiROFwL6roF9IsmjK2NIcQg1Z27FgIyU6-aSltNTITDc9LI=w500-no", :title => "Defibrillatore Philips Heartstart HS1" %>
+            </div>
+            <div>
+                <%= tag :img, :src => "https://lh3.googleusercontent.com/Yteu8dryhlk-paiuu92-VtQfjAqdlsnxXitTKKAmQmkHJWxLCIyMzZwLecHo6a1Lhb6UDFF1lSAduhwTggqEtoKGPe3xq71e619qlg6GxTjBL0CKlkWw_ZtxnlyD_fvtCOxx8n-59r50bJ4rHGIcW18tpvtnjsB0stwEbpC3ySOa-L03wRZgQXANIyamRbGWNVtWKwJtTmOhLsFiNwsYdOvI2OQgpRF8hRLAUFzBX-QJFIpwzvLEeBwYSk4l7ujvH2iBG4iB_6sBpogx4hmPfU7cvjDGaWSd0Fn2LSveOwT4cODgxhik3ts_RwHk1ARVoyd0GJ5WcFEwguy-cDhqj1zJOpBWN7_TZF3pDDHy551ssn695TCW9mvR5Dr9LpHMNzsVpt3fulMjHIirHt4rhpwHdyIxdg0PdjLIO7MSfC5bKZ-z-bYpPV-jFn8nwy-NsC_W5GNRVW15KD1c4hcKwTZ5No33Fwsh1pW9RJjGfr34HLhyg9myEkvK3vKYDmoIW5Cn6gqw58mgNBNBd2T9w5mu3ID9FLtphyWEDin7KqBF=w500-no", :title => "Defibrillatore Philips Heartstart HS1" %>
+            </div>
+        </div>
     </div>
 
     <div class="large-7 medium-7 columns">
