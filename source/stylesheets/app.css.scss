@@ -116,7 +116,6 @@ $wufoo-header-padding-bottom: rem-calc(12) !default;
   border-style: solid;
   border-width: 1px;
   border-color: darken($panel-bg, 20%);
-  padding: rem-calc(5px);
   margin-right: rem-calc(5px);
   a {
     color: $body-font-color;
@@ -124,14 +123,20 @@ $wufoo-header-padding-bottom: rem-calc(12) !default;
       color: lighten($body-font-color, 30%);
     }
   }
+
+  span.dataPromo {
+    text-transform: capitalize;
+  }
+
   .veryImportant {
     font-size: 480%;
     font-weight: bold;
     color: $rosso-color;
   }
   .important {
-    font-size: 200%;
+    font-size: 210%;
     font-weight: bold;
+    margin-top: 15px;
     line-height: $paragraph-line-height;
 
   }

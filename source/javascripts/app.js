@@ -8,5 +8,8 @@
 
 $(document).foundation();
 
+moment.locale('it');
+var lastDayOfMonth = moment().endOf('month').format("D\ MMMM");
 
+$("span.dataPromo").html(lastDayOfMonth);
 
