@@ -399,7 +399,8 @@ h2 {
     color: scale-color($body-font-color, $lightness: 35%);
 }
 .iconBig {
-        font-size: 300%;
+        font-size: 270%;
+        text-align: center;
         background-color: scale-color($body-font-color, $lightness: 85%);
         color: #ffffff;
         padding-left: 12px;
