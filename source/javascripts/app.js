@@ -9,7 +9,7 @@
 $(document).foundation();
 
 moment.locale('it');
-var lastDayOfMonth = moment().endOf('month').format("D\ MMMM");
+var lastDayOfMonth = moment().endOf('month').format("D\ MMMM YYYY");
 
 $("span.dataPromo").html(lastDayOfMonth);
 
