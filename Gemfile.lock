@@ -57,7 +57,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
-    eventmachine (1.0.7)
+    eventmachine (1.0.9.1)
     execjs (2.3.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
@@ -108,11 +108,10 @@ GEM
       rack-test (~> 0.6.2)
       thor (>= 0.15.2, < 2.0)
       tilt (~> 1.4.1, < 2.0)
-    middleman-livereload (3.1.1)
-      em-websocket (>= 0.2.0)
-      middleman-core (>= 3.0.2)
-      multi_json (~> 1.0)
-      rack-livereload
+    middleman-livereload (3.4.6)
+      em-websocket (~> 0.5.1)
+      middleman-core (>= 3.3)
+      rack-livereload (~> 0.3.15)
     middleman-minify-html (3.4.0)
       htmlcompressor (~> 0.1.0)
       middleman-core (>= 3.2)
@@ -134,7 +133,7 @@ GEM
       activesupport (>= 3.1)
     prismic.io (1.1.0)
     rack (1.6.0)
-    rack-livereload (0.3.15)
+    rack-livereload (0.3.16)
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -177,7 +176,7 @@ DEPENDENCIES
   fdt_middleman_tools (>= 1.0.0)
   middleman (~> 3.3.2)
   middleman-blog (~> 3.5.1)
-  middleman-livereload (~> 3.1.0)
+  middleman-livereload (~> 3.4.3)
   middleman-minify-html
   podio!
   podio_middleman!
@@ -188,4 +187,4 @@ DEPENDENCIES
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   1.10.5
+   1.11.2
